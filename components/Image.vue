@@ -1,0 +1,71 @@
+<template lang="pug">
+  figure(:class="figureClasses", ref="placeholder")
+    img(:src="src", alt="src", v-if="local")
+    img(:src="url", alt="src", v-else)
+</template>
+
+<script scoped>
+const baseUrl = "https://res.cloudinary.com/pw-img-cdn/image/fetch";
+
+function calcImageDimension(length, pixelRatio) {
+  return 100 * Math.round(length * pixelRatio / 100);
+}
+
+export default {
+  name: "c-image",
+  props: {
+    src: {
+      type: String,
+      required: true
+    },
+    square: Boolean,
+    face: Boolean,
+    card: Boolean,
+    withinText: Boolean,
+    local: Boolean
+  },
+  computed: {
+    figureClasses() {
+      return [
+        "figure",
+        {
+          "m-a0": !this.withinText,
+          "Card-figure": this.card
+        }
+      ];
+    }
+  },
+  data() {
+    return {
+      // Set to undefined as defaulting to an empty string shows
+      // the invalid image icon until a correct src is set
+      url: undefined
+    };
+  },
+  mounted() {
+    if (!this.local) {
+      // Load a resized cloudinary image
+      // fontend.center ep5: https://codepen.io/geelen/full/RGvQyJ
+      const image = this.$refs.placeholder;
+      const { clientWidth } = image;
+      const pixelRatio = window.devicePixelRatio || 1.0;
+      const imageWidth = calcImageDimension(clientWidth, pixelRatio);
+
+      const imageParams = `w_${imageWidth},c_fill,g_auto,f_auto`;
+
+      const url = `${baseUrl}/${imageParams}/${this.src}`;
+
+      const cdnImage = new Image();
+      cdnImage.src = url;
+
+      cdnImage.onload = () => {
+        this.url = url;
+      };
+    }
+  }
+};
+</script>
+
+<style scoped>
+@import "../assets/styles/variables.css";
+</style>

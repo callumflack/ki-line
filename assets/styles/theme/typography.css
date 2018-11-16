@@ -1,0 +1,86 @@
+/* 
+  -------------------------------------------------
+
+  Text
+
+  -------------------------------------------------
+ */
+
+p,
+ul,
+ol,
+.Text {
+  font-size: var(--rfs-text);
+  letter-spacing: var(--fls-regular);
+}
+
+/* 
+  -------------------------------------------------
+  
+  Text Headings
+  
+  Tufte CSS uses h1 for the document title, p with class subtitle for the document subtitle, h2 for section headings, and h3 for low-level headings. More specific headings are not supported. If you feel the urge to reach for a heading of level 4 or greater, consider redesigning your document.
+
+  -------------------------------------------------
+ */
+
+.Meta {
+  font-family: var(--ff-meta), var(--ff-stack-text);
+  font-size: var(--rfs-text-sm);
+  font-weight: 600;
+  letter-spacing: var(--fls-loose);
+  text-transform: uppercase;
+}
+
+.Meta--rule {
+  position: relative;
+
+  &:before {
+    background-color: var(--c-text);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  & span {
+    background-color: var(--c-bg);
+    padding: 0 1em;
+  }
+}
+
+/* 
+
+  Hero titles
+
+ */
+
+.Heading,
+.Subtitle,
+.Title,
+.Supertitle {
+  font-family: var(--ff-title), var(--ff-stack-text);
+  font-size: var(--rfs-title);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.Heading {
+  font-size: var(--rfs-heading);
+  font-weight: 700;
+}
+
+.Title,
+.Supertitle {
+}
+
+.Supertitle {
+  font-size: var(--rfs-supertitle);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+}

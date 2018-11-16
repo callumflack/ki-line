@@ -1,0 +1,102 @@
+/* 
+
+  LINKS
+
+*/
+
+p a,
+.Link {
+  transition: opacity 1000ms ease-out;
+}
+
+/* a:hover:not(.Button):not(.BlockLink), */
+p a:hover,
+p a:active,
+.Link:hover,
+.Link:active {
+  opacity: 0.4;
+  transition: opacity 600ms ease-out;
+}
+
+/* 
+
+  Nice underline
+
+ */
+
+p a:not(.Button),
+li a,
+.Link,
+.Link-block a {
+  --underline-space: var(--c-bg);
+  --underline: var(--c-gray);
+  --underline-hover: currentColor;
+  --text-shadow: var(--underline-space);
+
+  background-image: linear-gradient(var(--underline-space), var(--underline-space)),
+    linear-gradient(var(--underline-space), var(--underline-space)),
+    linear-gradient(var(--underline), var(--underline));
+  background-position: 0% 96%, 100% 96%, 0% 96%;
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 var(--text-shadow), -0.03em 0 var(--text-shadow), 0 0.03em var(--text-shadow),
+    0 -0.03em var(--text-shadow), 0.06em 0 var(--text-shadow), -0.06em 0 var(--text-shadow),
+    0.09em 0 var(--text-shadow), -0.09em 0 var(--text-shadow), 0.12em 0 var(--text-shadow),
+    -0.12em 0 var(--text-shadow), 0.15em 0 var(--text-shadow), -0.15em 0 var(--text-shadow);
+
+  &:hover {
+    background-image: linear-gradient(var(--underline-space), var(--underline-space)),
+      linear-gradient(var(--underline-space), var(--underline-space)),
+      linear-gradient(var(--underline-hover), var(--underline-hover));
+    color: var(--c-link);
+  }
+}
+
+.bg-neutral p a:not(.Button),
+.bg-neutral .Link,
+.bg-neutral .Link-block a {
+  --underline-space: var(--c-neutral);
+}
+
+/* 
+
+  Nuxt + BlockLinks
+
+ */
+
+.nuxt-link-active span {
+  position: relative;
+
+  &:after {
+    background-color: currentColor;
+    content: "";
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.25em;
+  }
+}
+
+.BlockLink {
+  display: block;
+  transition: 600ms ease-out;
+  transform: translateY(0);
+
+  &:hover {
+    transition: 250ms ease-out;
+    transform: translateY(-2%);
+    opacity: 1 !important;
+  }
+}
+
+.BlockLink-target {
+  display: inline-block;
+  transform: translateX(0);
+  transition: 1000ms ease-out;
+}
+
+.BlockLink:hover .BlockLink-target {
+  transform: translateX(4px);
+  transition: 600ms ease-out;
+}

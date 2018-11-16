@@ -1,0 +1,78 @@
+/* 
+
+  text
+
+ */
+
+@font-face {
+  font-family: var(--ff-text);
+  font-style: normal;
+  font-weight: 400;
+  src: url("~static/fonts/LyonText-Regular.otf") format("woff");
+}
+@font-face {
+  font-family: var(--ff-text);
+  font-style: italic;
+  font-weight: 400;
+  src: url("~static/fonts/LyonText-RegularItalic.otf") format("woff");
+}
+@font-face {
+  font-family: var(--ff-text);
+  font-style: normal;
+  font-weight: 600;
+  src: url("~static/fonts/LyonText-Semibold.otf") format("woff");
+}
+@font-face {
+  font-family: var(--ff-text);
+  font-style: italic;
+  font-weight: 600;
+  src: url("~static/fonts/LyonText-SemiboldItalic.otf") format("woff");
+}
+@font-face {
+  font-family: var(--ff-text);
+  font-style: normal;
+  font-weight: 700;
+  src: url("~static/fonts/LyonText-Bold.otf") format("woff");
+}
+@font-face {
+  font-family: var(--ff-text);
+  font-style: italic;
+  font-weight: 700;
+  src: url("~static/fonts/LyonText-BoldItalic.otf") format("woff");
+}
+@font-face {
+  font-family: var(--ff-text);
+  font-style: italic;
+  font-weight: 900;
+  src: url("~static/fonts/LyonText-Black.otf") format("woff");
+}
+
+/* 
+
+  title
+
+ */
+@font-face {
+  font-family: var(--ff-title);
+  font-style: normal;
+  font-weight: 400;
+  src: url("~static/fonts/LyonDisplay-Regular.otf") format("woff");
+}
+@font-face {
+  font-family: var(--ff-title);
+  font-style: normal;
+  font-weight: 500;
+  src: url("~static/fonts/LyonDisplay-Medium.otf") format("woff");
+}
+@font-face {
+  font-family: var(--ff-title);
+  font-style: normal;
+  font-weight: 700;
+  src: url("~static/fonts/LyonDisplay-Bold.otf") format("woff");
+}
+@font-face {
+  font-family: var(--ff-title);
+  font-style: normal;
+  font-weight: 900;
+  src: url("~static/fonts/LyonDisplay-Black.otf") format("woff");
+}

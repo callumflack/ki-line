@@ -1,0 +1,7 @@
+{
+  "name": "ki-line",
+  "alias": ["kiline.now.sh"],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
