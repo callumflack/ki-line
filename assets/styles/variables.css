@@ -4,24 +4,19 @@
 /* 
 
   Static custom properties only
+  Starting with media queries (don't nest within :root)
 
-*/
+  */
+
+@custom-media --mo (max-width: 512px);
+@custom-media --sm (min-width: 513px);
+@custom-media --md (min-width: 768px);
+@custom-media --mdl (min-width: 1024px);
+@custom-media --lg (min-width: 1280px);
+@custom-media --xl (min-width: 1600px);
+@custom-media --su (min-width: 1900px);
 
 :root {
-  /* 
-
-    Media queries 
-
-   */
-
-  /* @custom-media --mo (max-width: 512px);
-  @custom-media --sm (min-width: 513px);
-  @custom-media --md (min-width: 768px);
-  @custom-media --mdl (min-width: 1024px);
-  @custom-media --lg (min-width: 1280px);
-  @custom-media --xl (min-width: 1600px);
-  @custom-media --su (min-width: 1900px); */
-
   /* 
 
     Spacing
