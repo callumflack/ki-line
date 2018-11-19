@@ -14,16 +14,24 @@
   },
   "dependencies": {
     "@nuxtjs/google-tag-manager": "^2.1.0",
+    "@nuxtjs/style-resources": "^0.1.1",
     "iremono": "callumflack/iremono#experiments",
     "nuxt": "^1.4.2",
     "vue-scroll-reveal": "^1.0.11",
     "vue-tiny-slider": "^0.1.30"
   },
   "devDependencies": {
+    "autoprefixer": "^9.3.1",
     "babel-eslint": "^8.2.1",
     "eslint": "^4.15.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
+    "postcss-custom-media": "^7.0.7",
+    "postcss-custom-selectors": "^5.1.2",
+    "postcss-discard-comments": "^4.0.1",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-mixins": "^6.2.0",
+    "postcss-nested": "^4.1.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0"
   }

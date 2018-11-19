@@ -140,7 +140,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
+@import "../assets/styles/variables.css";
+
 .HeroBlend {
   background-blend-mode: multiply;
   background-image: linear-gradient(

@@ -58,8 +58,9 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@import "../assets/styles/variables.css";
+
 .Footer {
-  /* background-color: rgba(0, 0, 0, 0.333); */
   background-blend-mode: multiply;
   background-image: linear-gradient(
     to top,
@@ -70,9 +71,9 @@ export default {
 .Border {
   border-top: 1px solid var(--c-bg);
 
+.Container {
   @media (--sm) {
-    border-top: initial;
-    border-left: 1px solid var(--c-bg);
+    border-top: 1px solid salmon;
   }
 }
 

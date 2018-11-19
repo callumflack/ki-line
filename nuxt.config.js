@@ -21,6 +21,15 @@ module.exports = {
 
   css: ["~/assets/styles/application.css"],
 
+  /* 
+    You cannot use path aliases here (~ and @), you need to use relative or absolute paths.
+    So it must be a dot!
+    https://github.com/nuxt-community/style-resources-module
+  */
+  styleResources: {
+    css: "./assets/styles/variables.css"
+  },
+
   router: {
     middleware: "currentPage"
   },
@@ -36,33 +45,37 @@ module.exports = {
     /* { src: "~/plugins/vue-tiny-slider", ssr: false } */
   ],
 
-  modules: [["@nuxtjs/google-tag-manager", { id: "GTM-PTQSCT3" }]],
+  modules: [["@nuxtjs/google-tag-manager", { id: "GTM-PTQSCT3" }], "@nuxtjs/style-resources"],
 
   /* https://github.com/nuxt-community/axios-module#options */
   /* axios: {}, */
 
+  
+  /* extend webpack config */
   build: {
-    styleResources: {
-      css: "./assets/styles/variables.css"
-    },
-
     /* vendor: ["vue-tiny-slider"], */
 
-    /* extend webpack config */
+    /* https://www.evernote.com/l/ACw94CODEoJCEbgqo-RVrNisxAfsQdTW9Ck */
+    postcss: {
+      plugins: {}
+      /* preset: { stage: 0 } */
+    },
+    /* 
+      Get postcss syntax in single page component styles
+      Requires <style lang="postcss"
+      https://github.com/nuxt/nuxt.js/issues/3231
+    */
     extend(config, ctx) {
-      // Add postcss loader for CSS files
-      // https://github.com/nuxt/nuxt.js/issues/846#issuecomment-309196303
-      let cssLoader = config.module.rules.find(loader => loader.test.toString() === "/\\.css$/");
-      cssLoader.use.push("postcss-loader");
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        });
-      }
+      config.module.rules.push({
+        test: /\.postcss$/,
+        use: [
+          "vue-style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader"
+          }
+        ]
+      });
     }
   }
 };

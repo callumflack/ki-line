@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .Icon {
   @media (--mo) {
     & svg {
