@@ -21,10 +21,14 @@ module.exports = {
 
   css: ["~/assets/styles/application.css"],
 
-  /* https://github.com/nuxt-community/style-resources-module */
-  /* styleResources: {
+  /* 
+    You cannot use path aliases here (~ and @), you need to use relative or absolute paths.
+    So it must be a dot!
+    https://github.com/nuxt-community/style-resources-module
+  */
+  styleResources: {
     css: "./assets/styles/variables.css"
-  }, */
+  },
 
   router: {
     middleware: "currentPage"
@@ -47,29 +51,19 @@ module.exports = {
 
   /* extend webpack config */
   build: {
-    /* 
-    https://nuxtjs.org/faq/postcss-plugins#how-to-add-postcss-plugins-
-    https://github.com/nuxt/nuxt.js/issues/3231
-    https://codesandbox.io/s/5kr8nrlz5l 
-    */
+    /* https://www.evernote.com/l/ACw94CODEoJCEbgqo-RVrNisxAfsQdTW9Ck */
     postcss: {
-      plugins: {
-        /* "postcss-preset-env": false, */
-        "postcss-mixins": {},
-        "postcss-easy-import": {}
-        /* "postcss-preset-env": { stage: 0 } */
-        /* "postcss-custom-selectors": {},
-        "postcss-nested": {},
-        autoprefixer: {},
-        "postcss-custom-media": {},
-        "postcss-discard-comments": {} */
-      },
-      preset: { stage: 0 }
-    }
-    /* https://github.com/nuxt/nuxt.js/issues/3231 */
-    /* extend(config, ctx) {
+      plugins: {}
+      /* preset: { stage: 0 } */
+    },
+    /* 
+      Get postcss syntax in single page component styles
+      Requires <style lang="postcss"
+      https://github.com/nuxt/nuxt.js/issues/3231
+    */
+    extend(config, ctx) {
       config.module.rules.push({
-        test: /\.css$/,
+        test: /\.postcss$/,
         use: [
           "vue-style-loader",
           "css-loader",
@@ -78,6 +72,6 @@ module.exports = {
           }
         ]
       });
-    } */
+    }
   }
 };

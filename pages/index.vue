@@ -87,9 +87,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
+@import "../assets/styles/variables.css";
+
 .Blend {
-  /* background-color: rgba(0, 0, 0, 0.333); */
   background-blend-mode: multiply;
   background-image: linear-gradient(
     to top,
@@ -100,18 +101,13 @@ export default {
 }
 
 .Ki {
-  /* display: inline-block; */
   float: left;
   transform: translateY(0.25em);
 
   & img {
-    /* width: 225px; */
-  }
-}
-
-.IndexHeroTrio {
-  @media (--mo) {
-    padding-bottom: calc(9 / 16 * 100%);
+    @media (--lg) {
+      border: 5px solid salmon;
+    }
   }
 }
 </style>
