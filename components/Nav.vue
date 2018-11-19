@@ -1,6 +1,6 @@
 <template lang="pug">
   NavFixedOnScroll.Nav.Nav--animate.u-relative
-    .Container.Container--lg.f-childrenCenter
+    .Container.f-childrenCenter
       NavList
 
 </template>
@@ -52,5 +52,9 @@ export default {
   top: 0;
   width: 100%;
   z-index: 999;
+}
+
+.Nav >>> .Nav-link {
+  color: var(--c-bg);
 }
 </style>

@@ -31,7 +31,7 @@
 :root {
   --rs-space: 0.5rem;
   --rs-block-space: 1.25rem;
-  --rs-nav-height: 5rem;
+  --rs-nav-height: 4rem;
   --rs-hero: 24rem;
 }
 @media (--sm) {
@@ -43,7 +43,7 @@
   :root {
     --rs-space: 0.825rem;
     --rs-block-space: 2.25rem;
-    --rs-nav-height: 104px;
+    --rs-nav-height: 5rem;
     --rs-hero: 38rem;
   }
 }
@@ -51,7 +51,7 @@
   :root {
     --rs-space: 1rem;
     --rs-block-space: 3.25rem;
-    --rs-nav-height: 128px;
+    --rs-nav-height: 6rem;
     --rs-hero: 47rem;
   }
 }
@@ -90,12 +90,12 @@
 @media (--lg) {
   :root {
     --rfs-text-xs: 13px;
-    --rfs-text-sm: 15px;
+    --rfs-text-sm: 14px;
     --rfs-text: 19px;
-    --rfs-text-md: 24px;
-    --rfs-text-lg: 27px;
-    --rfs-heading: 32px;
+    --rfs-text-md: 21px;
+    --rfs-text-lg: 23px;
+    --rfs-heading: 30px;
     --rfs-title: 44px;
-    --rfs-supertitle: 44px;
+    --rfs-supertitle: 39px;
   }
 }

@@ -14,8 +14,8 @@ p a:hover,
 p a:active,
 .Link:hover,
 .Link:active {
-  opacity: 0.4;
-  transition: opacity 600ms ease-out;
+  /* opacity: 0.4;
+  transition: opacity 600ms ease-out; */
 }
 
 /* 
@@ -36,7 +36,7 @@ li a,
   background-image: linear-gradient(var(--underline-space), var(--underline-space)),
     linear-gradient(var(--underline-space), var(--underline-space)),
     linear-gradient(var(--underline), var(--underline));
-  background-position: 0% 96%, 100% 96%, 0% 96%;
+  background-position: 0% 91%, 100% 91%, 0% 91%;
   background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-repeat: no-repeat, no-repeat, repeat-x;
   text-shadow: 0.03em 0 var(--text-shadow), -0.03em 0 var(--text-shadow), 0 0.03em var(--text-shadow),
@@ -56,6 +56,11 @@ li a,
 .bg-neutral .Link,
 .bg-neutral .Link-block a {
   --underline-space: var(--c-neutral);
+}
+
+p a.c-brand:not(.Button),
+.c-brand:not(.Button) {
+  --underline: var(--c-brand);
 }
 
 /* 

@@ -9,8 +9,6 @@
               ImageLazy(src="https://res.cloudinary.com/pw-img-cdn/image/upload/v1540276499/contact-map_f8aaqq.jpg")
               //- img(src="/images/contact-map.jpg")
               a.MapArrow.BlockLink.z-100(:href="contacts.link" target="_blank")
-                IconBase(icon-name="location-arrow")
-                  IconMapArrow
 
         .ContactCanvas
           .f-mdl-childrenCenter
@@ -43,35 +41,12 @@
                           span.u-block {{ contacts.openingb }}
                           span.u-block {{ contacts.openingc }}
 
-                    .w-sm-5x12
-                      .p-x6.p-b6.GridBorder
-                        p.ff-title.fs-text-sm.m-b6.m-sm-b2
-                          IconBase.AlignIconWithParagraph.m-r2(height="12" width="12" icon-name="airport-icon")
-                            IconAirport
-                          | 7 mins from the airport, 8 mins from the city centre.
-                        p.ff-title.fs-text-sm.m-b6.m-sm-b2
-                          IconBase.AlignIconWithParagraph.m-r2(height="12" width="12" icon-name="yacht-icon")
-                            IconYacht
-                          | We pack and label ready to leave Australian waters, 24hr anytime delivery.
 
-                        p.ff-title.fs-text-sm.m-b0
-                          IconBase.AlignIconWithParagraph.m-r2(height="12" width="12" icon-name="social-media-link-icon")
-                            IconFavourite
-                          | Mostly busy butchering but also:
-                        p.ff-title.fs-text-sm.m-mo-b2
-                          span.u-block
-                            a.icon-targetBlank(:href="contacts.facebook") Facebook
-                          a.icon-targetBlank(:href="contacts.instagram") Instagram
 
 </template>
 
 <script>
 import BlockContact from "~/components/BlockContact";
-import IconBase from "~/components/IconBase";
-import IconMapArrow from "~/components/icons/IconMapArrow";
-import IconAirport from "~/components/icons/IconAirport";
-import IconYacht from "~/components/icons/IconYacht";
-import IconFavourite from "~/components/icons/IconFavourite";
 import ImageLazy from "~/components/ImageLazy";
 
 const contacts = {
@@ -91,11 +66,6 @@ const contacts = {
 export default {
   components: {
     BlockContact,
-    IconBase,
-    IconMapArrow,
-    IconAirport,
-    IconYacht,
-    IconFavourite,
     ImageLazy
   },
   data() {

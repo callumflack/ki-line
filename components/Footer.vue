@@ -1,12 +1,15 @@
 <template lang="pug">
-footer.Footer.b-pb3.ffs-block
+footer.Footer.b-pb2.ffs-block
   .Container
+    //- .u-textCenter
+      IconBase(icon-name="icon-turn" height="50" width="50")
+        IconTurn
 
-    NavList(footer)
+    NavList.b-mb075(footer)
 
     //- hr.b-my075
 
-    p.fs-text-md.u-textCenter.p-y6.m-b0
+    //- p.fs-text-md.u-textCenter.p-y6.m-b0
       a.u-linkClean.m-r3(:href="contacts.phone" target="_blank") {{ contacts.phone }}
       a.u-linkClean.m-r3(:href="`mailto:${contacts.email}`") {{ contacts.email }}
       a.u-linkClean(href="contacts.calendly" target="_blank") Calendly
@@ -14,11 +17,13 @@ footer.Footer.b-pb3.ffs-block
     p.fs-text-sm.fs-italic.c-text-ligh.u-textCenter
       //- | Copyright ©2018 Ki Woyke
       //- span.m-x2 •
-      a.u-linkClean(target="_blank" href="http://callumflack.design") Site by Callum Flack Design
+      a.u-linkClean.c-text-ligh(target="_blank" href="http://callumflack.design") Site by Callum Flack Design
 
 </template>
 
 <script scoped>
+import IconBase from "~/components/IconBase";
+import IconTurn from "~/components/icons/IconTurn";
 import NavList from "~/components/NavList";
 
 const contacts = {
@@ -29,6 +34,8 @@ const contacts = {
 
 export default {
   components: {
+    IconBase,
+    IconTurn,
     NavList
   },
   props: {},
@@ -51,10 +58,15 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.Knife {
-  height: 16px;
+.Footer {
+  /* background-color: rgba(0, 0, 0, 0.333); */
+  background-blend-mode: multiply;
+  background-image: linear-gradient(
+    to top,
+    rgba(155, 61, 209, 0) 100% rgba(155, 61, 209, 0.005) 40%,
+    rgba(155, 61, 209, 0.01) 0%
+  );
 }
-
 .Border {
   border-top: 1px solid var(--c-bg);
 

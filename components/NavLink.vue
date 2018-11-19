@@ -11,22 +11,13 @@
     :class="classes"
     :href="link"
   )
-    span
-      icon-base.c-brand.m-r2.Icon(icon-name="icon-call" height="18" width="18")
-        icon-call
     span {{ label }}
 </template>
 
 <script>
-import IconBase from "~/components/IconBase.vue";
-import IconCall from "~/components/icons/IconCall.vue";
-
 export default {
   name: "NavLink",
-  components: {
-    IconBase,
-    IconCall
-  },
+  components: {},
   props: {
     label: String,
     link: String,

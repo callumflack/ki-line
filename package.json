@@ -16,7 +16,8 @@
     "@nuxtjs/google-tag-manager": "^2.1.0",
     "iremono": "callumflack/iremono#experiments",
     "nuxt": "^1.4.2",
-    "vue-scroll-reveal": "^1.0.11"
+    "vue-scroll-reveal": "^1.0.11",
+    "vue-tiny-slider": "^0.1.30"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

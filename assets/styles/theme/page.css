@@ -58,6 +58,15 @@
   transform: translateY(0.075em);
 }
 
+.ParagraphImage {
+  float: left;
+  transform: translateY(0.25em);
+}
+.ParagraphImage--right {
+  float: right;
+  transform: translateY(0.25em);
+}
+
 /* .Button--feature {
   --button-background-color: var(--c-brand);
   --button-border-color: var(--c-brand);
@@ -99,6 +108,13 @@
 
 */
 
+.AspectRatio--4x1 {
+  padding-bottom: calc(100% / 4);
+}
+
+.bg-neutral-blue {
+  background-color: var(--c-neutral-blue);
+}
 .bg-brand-neutral {
   background-color: var(--c-brand-neutral);
 }

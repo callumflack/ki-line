@@ -1,5 +1,6 @@
 <template lang="pug">
-div(:class="classes")
+//- div(:class="classes")
+.f.f-justifyCenter.Meta.u-linkCleanChildren
   nuxt-link.Nav-link(to="/" exact) The Ki Line
   span.Nav-link •
   NavLink(
@@ -27,8 +28,8 @@ export default {
     classes() {
       return [
         {
-          "f f-justifyCenter Meta fw-700 c-block-bg u-linkCleanChildren": !this.footer,
-          "f f-justifyCenter Meta fw-900 u-linkCleanChildren": this.footer
+          "f f-justifyCenter Meta u-linkCleanChildren": !this.footer,
+          "f f-justifyCenter Meta u-linkCleanChildren": this.footer
         }
       ];
     }

@@ -91,13 +91,17 @@ export default {
 
 <style scoped>
 .collapse {
-  animation: collapse 0.7s ease-in-out 0.4s forwards;
+  animation: collapse 1s ease 0s forwards;
 }
 
 .open {
-  animation: open 0.25s ease-in-out forwards;
-  box-shadow: 0 9px 25px 0 rgba(0, 0, 0, 0.25), 0 19px 70px 0 rgba(0, 0, 0, 0.1);
+  animation: open 1s ease forwards;
+  box-shadow: 0 9px 25px 0 rgba(0, 0, 0, 0.125), 0 19px 70px 0 rgba(0, 0, 0, 0.05);
   /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15); */
+}
+
+.open >>> .Nav-link {
+  color: var(--c-text);
 }
 
 .static,
@@ -107,10 +111,12 @@ export default {
 
 @keyframes collapse {
   from {
+    background-color: var(--c-bg);
     opacity: 1;
     top: 0;
   }
   to {
+    background-color: transparent;
     opacity: 0;
     top: -100%;
   }
@@ -118,10 +124,12 @@ export default {
 
 @keyframes open {
   from {
+    background-color: transparent;
     opacity: 0;
     top: -100%;
   }
   to {
+    background-color: var(--c-bg);
     opacity: 1;
     top: 0;
   }

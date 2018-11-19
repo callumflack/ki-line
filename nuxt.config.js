@@ -11,13 +11,13 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "Yo."
+        content: "Transition coaching with Ki: make change work for you."
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
-  loading: { color: "hsl(131, 16%, 93%)" },
+  loading: { color: "#1a1a1a" },
 
   css: ["~/assets/styles/application.css"],
 
@@ -33,6 +33,7 @@ module.exports = {
     /* { src: "~/plugins/aos", ssr: false } */
     /* { src: "~/plugins/headroom", ssr: false } */
     { src: "~/plugins/vue-scroll-reveal", ssr: false }
+    /* { src: "~/plugins/vue-tiny-slider", ssr: false } */
   ],
 
   modules: [["@nuxtjs/google-tag-manager", { id: "GTM-PTQSCT3" }]],
@@ -44,6 +45,8 @@ module.exports = {
     styleResources: {
       css: "./assets/styles/variables.css"
     },
+
+    /* vendor: ["vue-tiny-slider"], */
 
     /* extend webpack config */
     extend(config, ctx) {

@@ -25,31 +25,37 @@ ol,
  */
 
 .Meta {
-  font-family: var(--ff-meta), var(--ff-stack-text);
+  font-family: var(--ff-meta), var(--ff-stack-heading);
   font-size: var(--rfs-text-sm);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: var(--fls-loose);
   text-transform: uppercase;
 }
 
 .Meta--rule {
+  --span-bg: var(--c-bg);
   position: relative;
 
   &:before {
-    background-color: var(--c-text);
+    background-color: var(--c-text-light);
     content: "";
     height: 1px;
     left: 0;
     position: absolute;
     top: 43%;
     width: 100%;
-    z-index: -1;
+    /* z-index: -1; */
   }
 
   & span {
     background-color: var(--c-bg);
     padding: 0 1em;
+    position: relative;
   }
+}
+
+.bg-neutral .Meta--rule {
+  --span-bg: var(--c-neutral);
 }
 
 /* 
@@ -78,9 +84,13 @@ ol,
 }
 
 .Supertitle {
+  font-family: "Super", var(--ff-stack-text);
   font-size: var(--rfs-supertitle);
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  line-height: 1;
-  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  /* text-transform: uppercase; */
+  font-size: 36px;
+  /* transform: translateY(-20px); */
 }

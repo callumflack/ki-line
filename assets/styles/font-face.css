@@ -57,22 +57,37 @@
   font-style: normal;
   font-weight: 400;
   src: url("~static/fonts/LyonDisplay-Regular.otf") format("woff");
+  src: url("~static/fonts/AttenNew-Medium.otf") format("woff");
 }
 @font-face {
   font-family: var(--ff-title);
   font-style: normal;
   font-weight: 500;
   src: url("~static/fonts/LyonDisplay-Medium.otf") format("woff");
+  src: url("~static/fonts/AttenNew-Medium.otf") format("woff");
 }
 @font-face {
   font-family: var(--ff-title);
   font-style: normal;
   font-weight: 700;
   src: url("~static/fonts/LyonDisplay-Bold.otf") format("woff");
+  src: url("~static/fonts/AttenNew-Bold.otf") format("woff");
 }
 @font-face {
   font-family: var(--ff-title);
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   src: url("~static/fonts/LyonDisplay-Black.otf") format("woff");
+  src: url("~static/fonts/AttenNew-ExtraBold.otf") format("woff");
+}
+
+/* Supertitle */
+@font-face {
+  font-family: "Super";
+  font-style: italic;
+  font-weight: 400;
+  src: url("~static/fonts/LyonDisplay-Regular.otf") format("woff");
+  src: url("~static/fonts/AttenNew-Book.otf") format("woff");
+  src: url("~static/fonts/LyonDisplay-RegularItalic.otf") format("woff");
+  src: url("~static/fonts/LyonDisplay-LightItalic.otf") format("woff");
 }
