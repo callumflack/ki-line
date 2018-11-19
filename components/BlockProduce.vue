@@ -33,6 +33,6 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 /* @import "../assets/styles/variables.css"; */
 </style>

@@ -18,7 +18,7 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .ListItem {
   margin-bottom: var(--grid-gutter);
 

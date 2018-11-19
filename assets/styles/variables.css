@@ -14,13 +14,13 @@
 
    */
 
-  @custom-media --mo (max-width: 512px); /* mo = mobile only */
+  /* @custom-media --mo (max-width: 512px);
   @custom-media --sm (min-width: 513px);
   @custom-media --md (min-width: 768px);
   @custom-media --mdl (min-width: 1024px);
   @custom-media --lg (min-width: 1280px);
   @custom-media --xl (min-width: 1600px);
-  @custom-media --su (min-width: 1900px);
+  @custom-media --su (min-width: 1900px); */
 
   /* 
 
@@ -58,7 +58,7 @@
   
    */
 
-  --ff-text: "SF";
+  --ff-text: "Text";
   --ff-meta: var(--ff-text);
   --ff-title: "Title";
 

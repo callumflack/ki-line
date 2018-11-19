@@ -77,7 +77,7 @@ export default {
 };
 </script>
 
-<style scoped lang="postcss">
+<style scoped>
 .GridMarginLeft {
   @media (--sm) {
     margin-left: calc(100% * 1 / 12);

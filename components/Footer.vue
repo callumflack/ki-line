@@ -50,17 +50,12 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
-.Knife {
-  height: 16px;
-}
+<style scoped>
+/* @import "../assets/styles/variables.css"; */
 
-.Border {
-  border-top: 1px solid var(--c-bg);
-
+.Container {
   @media (--sm) {
-    border-top: initial;
-    border-left: 1px solid var(--c-bg);
+    border-top: 1px solid salmon;
   }
 }
 

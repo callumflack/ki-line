@@ -79,7 +79,7 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .Knife {
   height: 16px;
 }

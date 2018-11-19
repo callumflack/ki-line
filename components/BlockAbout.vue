@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .InsetImage {
   @media (--mdl) {
     margin-right: calc(100% * 1 / 12);

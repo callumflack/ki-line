@@ -119,7 +119,7 @@ export default {
 };
 </script>
 
-<style scoped lang="postcss">
+<style scoped>
 .Layout {
   @media (max-width: 1023px) {
     display: flex;
