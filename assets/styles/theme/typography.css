@@ -58,6 +58,34 @@ ol,
   --span-bg: var(--c-neutral);
 }
 
+.Meta--ruleOnImage {
+  --span-bg: var(--c-bg);
+  position: relative;
+
+  &:before {
+    background-color: var(--c-text-light);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 43%;
+    width: 39%;
+  }
+  &:after {
+    background-color: var(--c-text-light);
+    content: "";
+    height: 1px;
+    right: 0;
+    position: absolute;
+    top: 43%;
+    width: 39%;
+  }
+}
+
+.bg-neutral .Meta--rule {
+  --span-bg: var(--c-neutral);
+}
+
 /* 
 
   Hero titles

@@ -1,7 +1,7 @@
 <template lang="pug">
-//- div(:class="classes")
 .f.f-justifyCenter.Meta.u-linkCleanChildren
-  nuxt-link.Nav-link(to="/" exact) The Ki Line
+  nuxt-link.Nav-link(to="/" exact) 
+    span The Ki Line
   span.Nav-link •
   NavLink(
     v-for="item in NavLinks"
@@ -17,22 +17,6 @@ import NavLink from "~/components/NavLink";
 export default {
   components: {
     NavLink
-  },
-  props: {
-    footer: {
-      type: Boolean,
-      default: false
-    }
-  },
-  computed: {
-    classes() {
-      return [
-        {
-          "f f-justifyCenter Meta u-linkCleanChildren": !this.footer,
-          "f f-justifyCenter Meta u-linkCleanChildren": this.footer
-        }
-      ];
-    }
   },
   data() {
     return {
@@ -67,7 +51,6 @@ export default {
 }
 
 .Nav-link + .Nav-link {
-  margin-left: var(--s-2);
   margin-left: var(--inline-block-children-space);
 }
 </style>

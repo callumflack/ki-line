@@ -161,7 +161,7 @@
   --horizontal-rule-space: var(--s-paragraph);
   --html-c: var(--c-text);
   --html-bg: var(--c-bg);
-  --inline-block-children-space: calc(1 * var(--s-3));
+  --inline-block-children-space: calc(1 * var(--s-3a));
   --list-inset-padding: calc(1.5 * var(--rs-space));
   --list-style-type: disc;
   --progress-height: 32px;

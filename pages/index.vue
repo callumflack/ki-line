@@ -56,7 +56,7 @@ div
     .b-py4.bg-neutral-blue.CoverImage.Heights
       .Container
         .b-mb1.u-textCenter
-          h5.Meta.Meta--rule.u-textCenter
+          h5.Meta.Meta--ruleOnImage.u-textCenter
             span What people say
         
         .Slider
@@ -104,16 +104,46 @@ const quotes = [
       "I have had the privilege of associating with Ki over the past several months and admire her passion in helping individuals discover and appreciate their unique gifts. Not only does Ki genuinely care about her clients but she goes the extra mile to successfully transition them into their new work environment. I would highly recommend Ki to anyone looking to improve their personal life and wanting to find greater joy and success in their career. Thank you Ki for your amazing service!"
   },
   {
-    author: "Troy McGuinness",
+    author: "Andreas Woyke",
     place: "Cedar Co Dems Ice Cream Social",
     quote:
-      "I have had the privilege of associating with Ki over the past several months and admire her passion in helping individuals discover and appreciate their unique gifts. Not only does Ki genuinely care about her clients but she goes the extra mile to successfully transition them into their new work environment. I would highly recommend Ki to anyone looking to improve their personal life and wanting to find greater joy and success in their career. Thank you Ki for your amazing service!"
+      "After only one session I was already surprised to notice more clarity with some personal and professional life issues, which I had been facing time and again with a certain perplexity. Ki’s conscious guidance in our coaching conversation enabled me to focus on the essential, to let go of unnecessary mental distractions, and to gain clarity about my goals. She responds intuitively and with high sensitivity in her gift of listening and empathizing to what I share and describe, but at the same time she finds the perfect moment to refocus my goal, and to set aside distracting and intrusive thoughts."
   },
   {
-    author: "Bruce",
+    author: "Ben M.",
+    place: "Intelligence Officer",
+    quote:
+      "Ki was the steady hand that guided me through my own personal renaissance — a transformation from neuroticism to balance, timidity to confidence. Acknowledging that everyone's journey is different, Ki met me where I was and empowered me to discover the path forward. I am eternally grateful for her help and advice during what was otherwise a very trying time."
+  },
+  /* {
+    author: "Matthew C.",
     place: "Psyke Lair",
     quote:
-      "I have had the privilege of associating with Ki over the past several months and admire her passion in helping individuals discover and appreciate their unique gifts. Not only does Ki genuinely care about her clients but she goes the extra mile to successfully transition them into their new work environment. I would highly recommend Ki to anyone looking to improve their personal life and wanting to find greater joy and success in their career. Thank you Ki for your amazing service!"
+      "Finding a life coach is a difficult task, and discussing everything about your life with a stranger is an intimidating process. Ki made the process comfortable, informative, and above all else helpful. I would recommend Ki as a life coach to anyone looking to explore their past, present, and future, and to find the path they need to get on or need to get back on."
+  },
+  {
+    author: "Matthew C.",
+    place: "Part 2…",
+    quote:
+      "Ki helped me remember who I am at my core and what really matters to me. She helped me set goals and redefine goals, and she helped me find my inner peace again through exercises in breathing, envisioning the future, re-analyzing myself. Ki is always in your corner, always encouraging, and always gives you something to think about and work on between sessions. Her sessions, feedback, and suggestions are completely personalized to your needs."
+  },
+  {
+    author: "A.B.G.",
+    place: "Part 2…",
+    quote:
+      "My experience with Ki's coaching had an amazing effect - not only on my career plans (my main expectation from the coaching) but also on my self-awareness. The coaching sessions were crucial to my decision on the career path I should follow - in a period  when I was taken by much insecurity  and so many worries and doubts. It also provided me with powerful insights on my inner self and my emotional and mind processes, and therefore guided me towards the answers I was for so long searching for. Finally, I became visibly more confident on myself and my value, both as a person and as a professional. Ki is fantastic, I strongly recommend her!"
+  }, */
+  {
+    author: "Calvin",
+    place: "Part 2…",
+    quote:
+      "nsightful, supportive, intuitive, and thorough. These are the qualities that I found in Ki as she coached me over 12 sessions. Her coaching approach was non-intrusive but allowed her to inspire and move me forward to achieving my goals during a particularly rough period of my life."
+  },
+  {
+    author: "Joseph Myers",
+    place: "Part 2…",
+    quote:
+      "I felt myself becoming more productive, confident, and committed to ideas as well as personal relationships over the course of four months. I learned how to achieve successful business practices and personal relationships. I shifted my perspective from external factors to internal ones and feel like I have a better understanding of how to follow my individual path to successful relationships of all kinds."
   }
 ];
 
@@ -132,6 +162,7 @@ export default {
       quotes,
       tinySliderOptions: {
         autoplay: true,
+        autoWidth: true,
         autoplayButtonOutput: false,
         controls: false,
         gutter: 20,

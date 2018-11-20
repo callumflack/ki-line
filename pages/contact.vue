@@ -24,9 +24,6 @@ div
           li #[a.c-brand.fs-italic(href="tel:716-704-2072") Call 716 704 2072]
           li #[a.c-brand.fs-italic(href="mailto:ki@thekiline.com") Email ki@thekiline.com]
           li #[a.c-brand.fs-italic(href="https://calendly.com/ki--1" target="_blank") Schedule with Calendly]
-          
-        //- p.b-mt1.u-textCenter
-          a.Button.Meta.fw-700 Book 30 minutes free
 
 </template>
 
