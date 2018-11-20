@@ -96,8 +96,7 @@ export default {
   head() {
     return {
       title: "Services—The Ki Line",
-      description:
-        "Independently owned and operated since 1925, ours is a family story. Find a warm, personal invitation to share our family tradition and become part of our customer family."
+      description: "Stuff here…"
     };
   }
 };

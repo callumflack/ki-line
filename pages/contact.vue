@@ -40,9 +40,8 @@ export default {
   },
   head() {
     return {
-      title: "About the Edge Hill Butchery, Cairns",
-      description:
-        "Independently owned and operated since 1925, ours is a family story. Find a warm, personal invitation to share our family tradition and become part of our customer family."
+      title: "Contact—The Ki Line",
+      description: "Stuff here…"
     };
   }
 };
