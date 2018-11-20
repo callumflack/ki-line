@@ -14,7 +14,14 @@ export default {
         content: "Transition coaching with Ki: make change work for you."
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.5/tiny-slider.css"
+      }
+    ]
   },
 
   loading: { color: "#1a1a1a" },
@@ -41,8 +48,8 @@ export default {
   plugins: [
     /* { src: "~/plugins/aos", ssr: false } */
     /* { src: "~/plugins/headroom", ssr: false } */
-    { src: "~/plugins/vue-scroll-reveal", ssr: false }
-    /* { src: "~/plugins/vue-tiny-slider", ssr: false } */
+    { src: "~/plugins/vue-scroll-reveal", ssr: false },
+    { src: "~/plugins/vue-tiny-slider", ssr: false }
   ],
 
   modules: [["@nuxtjs/google-tag-manager", { id: "GTM-PTQSCT3" }], "@nuxtjs/style-resources"],

@@ -59,17 +59,15 @@ div
           h5.Meta.Meta--rule.u-textCenter
             span What people say
         
-        //- no-ssr
-          vue-slider(ref="slider" v-model="value")
-        .Slide
-          .fs-block-lg
-            p 
-              | I have had the privilege of associating with Ki over the past several months and admire her passion in helping individuals discover and appreciate their unique gifts. Not only does Ki genuinely care about her clients but she goes the extra mile to successfully transition them into their new work environment.
-              | I would highly recommend Ki to anyone looking to improve their personal life and wanting to find greater joy and success in their career. 
-              //- Ki has years of training and experience in the life coaching industry and her skills in developing a customized solution for her clients is exceptional.
-              | Thank you Ki for your amazing service!
-            p.Meta.m-b1 Troy Price 
-            p.fs-text-sm.fs-italic Cedar Co Dems Ice Cream Social
+        .Slider
+          no-ssr
+            //- vue-tiny-slider(:mouse-drag="true" :loop="false" items="2" gutter="20")
+            vue-tiny-slider(v-bind="tinySliderOptions")
+              .Slide(v-for="item in quotes" :key="item.author")
+                .fs-block-lg
+                  p {{ item.quote }} 
+                  p.Meta.m-b1.u-textCenter {{ item.author }} 
+                  p.fs-text-sm.fs-italic.u-textCenter {{ item.place }}
 
 </template>
 
@@ -84,33 +82,67 @@ import ImageLazy from "~/components/ImageLazy";
 
 // ssr: false ain't enough…
 // https://github.com/NightCatSama/vue-slider-component#using-it-with-nuxtjs
-// let components = {
-//   IconBase,
-//   IconIso,
-//   IconContainer,
-//   IconPyramid,
-//   IconBowl,
-//   ImageLazy
-// };
+let components = {
+  IconBase,
+  IconIso,
+  IconContainer,
+  IconPyramid,
+  IconBowl,
+  ImageLazy
+};
 
-// if (process.browser) {
-//   let VueTinySlider = require("vue-tiny-slider");
-//   components["vue-tiny-slider"] = VueTinySlider;
-// }
+if (process.browser) {
+  let VueTinySlider = require("vue-tiny-slider");
+  components["vue-tiny-slider"] = VueTinySlider;
+}
+
+const quotes = [
+  {
+    author: "Troy Price",
+    place: "Cedar Co Dems Ice Cream Social",
+    quote:
+      "I have had the privilege of associating with Ki over the past several months and admire her passion in helping individuals discover and appreciate their unique gifts. Not only does Ki genuinely care about her clients but she goes the extra mile to successfully transition them into their new work environment. I would highly recommend Ki to anyone looking to improve their personal life and wanting to find greater joy and success in their career. Thank you Ki for your amazing service!"
+  },
+  {
+    author: "Troy McGuinness",
+    place: "Cedar Co Dems Ice Cream Social",
+    quote:
+      "I have had the privilege of associating with Ki over the past several months and admire her passion in helping individuals discover and appreciate their unique gifts. Not only does Ki genuinely care about her clients but she goes the extra mile to successfully transition them into their new work environment. I would highly recommend Ki to anyone looking to improve their personal life and wanting to find greater joy and success in their career. Thank you Ki for your amazing service!"
+  },
+  {
+    author: "Bruce",
+    place: "Psyke Lair",
+    quote:
+      "I have had the privilege of associating with Ki over the past several months and admire her passion in helping individuals discover and appreciate their unique gifts. Not only does Ki genuinely care about her clients but she goes the extra mile to successfully transition them into their new work environment. I would highly recommend Ki to anyone looking to improve their personal life and wanting to find greater joy and success in their career. Thank you Ki for your amazing service!"
+  }
+];
 
 export default {
-  components: {
+  /* components: {
     IconBase,
     IconIso,
     IconContainer,
     IconPyramid,
     IconBowl,
     ImageLazy
-  },
-  /* components: components, */
+  }, */
+  components: components,
   data() {
     return {
-      value: 1
+      quotes,
+      tinySliderOptions: {
+        autoplay: true,
+        autoplayButtonOutput: false,
+        controls: false,
+        gutter: 20,
+        items: 1,
+        loop: false,
+        mode: "carousel",
+        mouseDrag: true,
+        nav: true,
+        navPosition: "bottom",
+        rewind: true
+      }
     };
   }
 };
@@ -122,5 +154,37 @@ export default {
 .Heights {
   background-image: url("/images2/heights3.jpg");
   background-blend-mode: multiply;
+}
+
+/* tiny slider theme */
+.Slider >>> .tns-outer {
+  display: flex;
+  flex-direction: column;
+}
+
+.Slider >>> .tns-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--s-4);
+}
+
+.Slider >>> .tns-ovh {
+  display: flex;
+  order: -1;
+}
+
+.Slider >>> .tns-nav button {
+  border-radius: 999px;
+  height: 0.5em;
+  width: 0.5em;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.Slider >>> .tns-nav button + button {
+  margin-left: 1em;
+}
+
+.Slider >>> .tns-nav-active {
+  background-color: var(--c-text) !important;
 }
 </style>
