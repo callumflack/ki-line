@@ -1,6 +1,6 @@
-const pkg = require("./package");
+/* import pkg from "./package.json"; */
 
-module.exports = {
+export default {
   mode: "universal",
 
   head: {
@@ -50,7 +50,6 @@ module.exports = {
   /* https://github.com/nuxt-community/axios-module#options */
   /* axios: {}, */
 
-  
   /* extend webpack config */
   build: {
     /* vendor: ["vue-tiny-slider"], */
