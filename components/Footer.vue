@@ -1,10 +1,22 @@
 <template lang="pug">
 footer.Footer.b-pb2.ffs-block
-  .Container
-    //- .u-textCenter
-      IconBase(icon-name="icon-turn" height="50" width="50")
-        IconTurn
+  .Container(v-show="this.$route.name !== 'contact'")
+    .b-mb1.u-textCenter
+      IconBase(icon-name="icon-bowl" height="36" width="36")
+        IconBowl
+      h5.Meta.Meta--rule.u-textCenter.b-mt05 
+        //- span Get in touch
+        span Talk to Ki
+    .b-mb1.fs-block-lg
+      p I hold in-person coaching for groups and individuals in the Greater Seattle Area, Washington. I also hold online coaching for groups and individuals worldwide via video. To see if I can help you, please get in touch:
+      //- ul
+        li #[a.c-brand.fs-italic(href="tel:716-704-2072") Call 716 704 2072]
+        li #[a.c-brand.fs-italic(href="mailto:ki@thekiline.com") Email ki@thekiline.com]
+        //- li #[a.c-brand.fs-italic(href="#") Schedule with Calendly]
+      p.b-mt075.u-textCenter
+        a.Button.Meta.fw-700(href="https://calendly.com/ki--1" target="_blank") Book 30 minutes free
 
+  .Container
     NavList.b-mb075(footer)
 
     //- hr.b-my075
@@ -17,13 +29,13 @@ footer.Footer.b-pb2.ffs-block
     p.fs-text-sm.fs-italic.c-text-ligh.u-textCenter
       //- | Copyright ©2018 Ki Woyke
       //- span.m-x2 •
-      a.u-linkClean.c-text-ligh(target="_blank" href="http://callumflack.design") Site by Callum Flack Design
+      a.u-linkClean.c-text-light(target="_blank" href="http://callumflack.design") Site by Callum Flack Design
 
 </template>
 
 <script scoped>
 import IconBase from "~/components/IconBase";
-import IconTurn from "~/components/icons/IconTurn";
+import IconBowl from "~/components/icons/IconBowl";
 import NavList from "~/components/NavList";
 
 const contacts = {
@@ -35,10 +47,9 @@ const contacts = {
 export default {
   components: {
     IconBase,
-    IconTurn,
+    IconBowl,
     NavList
   },
-  props: {},
   data() {
     return {
       contacts
@@ -60,22 +71,15 @@ export default {
 <style lang="postcss" scoped>
 @import "../assets/styles/variables.css";
 
-.Footer {
+/* .Footer {
   background-blend-mode: multiply;
   background-image: linear-gradient(
-    to top,
-    rgba(155, 61, 209, 0) 100% rgba(155, 61, 209, 0.005) 40%,
-    rgba(155, 61, 209, 0.01) 0%
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.075) 70%,
+    rgba(0, 0, 0, 0.15) 100%
   );
-}
-.Border {
-  border-top: 1px solid var(--c-bg);
-
-.Container {
-  @media (--sm) {
-    border-top: 1px solid salmon;
-  }
-}
+} */
 
 .Footer >>> .Nav-link {
   height: auto;

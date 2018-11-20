@@ -3,37 +3,23 @@ div
   header.Header.b-pb2
     .AspectRatio.AspectRatio--3x1
       .AspectRatio-object
-        img(src="/images2/about.jpg", alt="Gladness")
+        img(src="/images2/hero-shorebeyond.jpg", alt="Gladness")
       .AspectRatio-object.HeroBlend.f.f-childrenCenter
-        //- .bg-black.p-y4.w-100.f-expandTop
-        .b-pb1.w-100.f-expandTop
+        div
           .Container
-            //- .b-mb05.u-textCenter
-              IconBase.c-bg(icon-name="icon-iso" height="40" width="40")
-                IconIso
-            h1.Supertitle.u-textCenter.c-bg Your ally in transition
-            //- h2.Text.fs-text-md.fw-500.fs-italic.u-textCenter.c-bg
-              //- | The answers are already within us. Sometimes we need help to uncover them.
-              | I will give you the tools to keep moving, even when the path becomes narrow and steep.
-
-  //- section.b-pb2
-    .Container.Container--md
-      .b-mb1.u-textCenter
-        h5.Meta.Meta--rule.u-textCenter.b-mt05 
-          span Services
-      .AspectRatio(style="padding-bottom:87.890625%")
-        .AspectRatio-object
-          img(src="/images2/services.jpg", alt="Services")
+            //- h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Your ally in transition
+            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Who looks outside, dreams.#[br]Who looks inside, awakens.
+            p.fs-text-sm.fs-italic.c-bg.u-textCenter — Carl Jung
 
   section.b-pb2
     .Container.Header--animate
       .b-mb1.u-textCenter
-        IconBase(icon-name="icon-container" height="40" width="40")
+        IconBase(icon-name="icon-container" height="36" width="36")
           IconPyramid
         h5.Meta.Meta--rule.u-textCenter.b-mt05 
           span About Ki
       .fs-block-lg
-        .ParagraphImage.w-1x2.w-lg-1x3.m-r6.p-b3
+        .ParagraphImage.w-1x3.w-lg-3x12.m-r6.p-b3
           img(src="/images2/ki.jpg", alt="")
 
         p Curiosity and a need to balance my head and heart had me explore a few unique careers. With a Master’s degree in Literature and Oriental Studies (Bayerische Julius-Maximilians University Würzburg, Germany) and a passion to learn other cultures and languages, I am always seeking multi-cultural destinations, partnerships, and learning. A desire for growth made me look for, and accept, new opportunities. I enjoyed almost a decade each working in International Relations in Europe, and teaching foreign languages in Alaska. I was a volunteer radio personality for the American Forces Network in Germany hosting a show that focused on German culture and traditions, and I had the privilege to serve as Shareholder Relations Administrator for an Alaskan Native Village Corporation.
@@ -67,31 +53,16 @@ div
       .b-mb1.u-textCenter
         h5.Meta.Meta--rule.u-textCenter.b-mt05 
           span The Ki Line Approach
+      //- .b-mb1
+        img(src="/images2/ki-dark.jpg", alt="")
       .fs-block-lg
-        .ParagraphImage.ParagraphImage--right.w-1x2.w-lg-1x2.m-l6.p-b3
+        //- .ParagraphImage.ParagraphImage--right.w-1x2.w-lg-1x2.m-l6.p-b3
           img(src="/images2/ki-dark.jpg", alt="")
         p The Ki Line approach to coaching is all about honoring your true self and your true potential. With deep compassion for the human experience, I am committed to safeguard your most personal story, and to help you access your true power within. The Ki Line is your powerline to successful leadership, your helpline for balance in cross-cultural transition, relationships, and your hotline to increase joy and energy in all aspects of your life.
         p As an iPEC trained and certified coach and ICF member, I am committed to my profession’s highest ethical standards. I firmly believe that you can accomplish everything you can envision. The secret to success is commitment and perseverance to do the work, maintaining and increasing your energy during the process, and accountability – all accessible with a coach’s tools. As you coach with The Ki Line, these tools will be available to you throughout our journey and beyond.
         p Sometimes, this “work” means uncovering and removing blocks in your path, changing a belief that limits you, re-evaluating assumptions, or giving your inner critic a new voice.
         p As we explore your goals and aspirations together, you will rediscover your passions and envision the amazing life you are about to create. We will devise an action plan tailored to your unique abilities, set goals, and take the necessary steps to reach them.
         p Just like with a challenging hike, depending on the terrain and day form, these steps might be baby steps or giant leaps, but I will be there with you to make sure you keep moving forward. I am your accountability buddy on this trek across the glacier of dreams, this hike up the mountain of life purpose goals. As your ally, I will hand you the tools to keep moving, even when the path becomes narrow and steep. 
-          nuxt-link.fs-italic.c-brand(to="/about") Learn more… 
-
-  section.b-pb2
-    .Container
-      .b-mb1.u-textCenter
-        IconBase(icon-name="icon-container" height="40" width="40")
-          IconBowl
-        h5.Meta.Meta--rule.u-textCenter.b-mt05 
-          span Get in touch
-      .fs-block-lg
-        p I hold in-person coaching for groups and individuals in the Greater Seattle Area, Washington. I also hold online coaching for groups and individuals worldwide via video. To see if I can help you, please get in touch:
-        ul
-          li #[a.c-brand.fs-italic(href="tel:716-704-2072") Call 716 704 2072]
-          li #[a.c-brand.fs-italic(href="mailto:ki@thekiline.com") Email ki@thekiline.com]
-          //- li #[a.c-brand.fs-italic(href="#") Schedule with Calendly]
-        p.b-mt1.u-textCenter
-          a.Button.Meta.fw-700 Book 30 minutes free
 
 </template>
 
@@ -123,14 +94,4 @@ export default {
 </script>
 
 <style scoped lang="postcss">
-.HeroBlend {
-  background-blend-mode: multiply;
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.45) 40%,
-    rgba(0, 0, 0, 0.25) 70%,
-    rgba(0, 0, 0, 0.15) 100%
-  );
-}
 </style>

@@ -9,7 +9,6 @@
 import IconBase from "~/components/IconBase.vue";
 import IconHamburger from "~/components/icons/IconHamburger.vue";
 import IconHamburgerClose from "~/components/icons/IconHamburgerClose.vue";
-import Logo from "~/components/Logo";
 import NavList from "~/components/NavList";
 import NavMobile from "~/components/NavMobile";
 import NavFixedOnScroll from "~/components/NavFixedOnScroll.vue";
@@ -18,7 +17,6 @@ import NavFixedOnScroll from "~/components/NavFixedOnScroll.vue";
 
 export default {
   components: {
-    Logo,
     NavList,
     NavMobile,
     NavFixedOnScroll,
@@ -45,8 +43,6 @@ export default {
 <style scoped>
 .Nav {
   backface-visibility: hidden;
-  /* background-color: var(--c-text); */
-  /* height: var(--rs-nav-height); */
   left: 0;
   position: fixed;
   top: 0;

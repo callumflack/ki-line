@@ -48,6 +48,10 @@ export default {
         {
           label: "Blog",
           link: "/blog"
+        },
+        {
+          label: "Contact",
+          link: "/contact"
         }
       ]
     };

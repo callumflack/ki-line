@@ -101,7 +101,7 @@ export default {
 }
 
 .open >>> .Nav-link {
-  color: var(--c-text);
+  color: var(--c-text) !important;
 }
 
 .static,
