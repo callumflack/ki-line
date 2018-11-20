@@ -16,6 +16,7 @@
     "@nuxtjs/google-tag-manager": "^2.1.0",
     "@nuxtjs/style-resources": "^0.1.1",
     "iremono": "callumflack/iremono#experiments",
+    "jstransformer-markdown-it": "^2.1.0",
     "nuxt": "^2.3.1",
     "vue-scroll-reveal": "^1.0.11",
     "vue-tiny-slider": "^0.1.30"
