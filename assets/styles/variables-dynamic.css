@@ -70,7 +70,7 @@
   --rfs-text-lg: 16px;
   --rfs-heading: 16px;
   --rfs-title: 21px;
-  --rfs-supertitle: 27px;
+  --rfs-supertitle: 32px;
 }
 @media (--sm) {
   :root {
@@ -81,11 +81,12 @@
     --rfs-text-lg: 20px;
     --rfs-heading: 24px;
     --rfs-title: 27px;
-    --rfs-supertitle: 33px;
+    --rfs-supertitle: 37px;
   }
 }
 @media (--mdl) {
   :root {
+    --rfs-supertitle: 44px;
   }
 }
 @media (--lg) {
@@ -97,6 +98,6 @@
     --rfs-text-lg: 21px;
     --rfs-heading: 30px;
     --rfs-title: 32px;
-    --rfs-supertitle: 39px;
+    --rfs-supertitle: 54px;
   }
 }

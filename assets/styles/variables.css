@@ -66,21 +66,6 @@
   --ff-stack-heading: var(--ff-stack-serif);
 
   /* 
-  
-    Font sizes
-
-    <text-unit> * 16 * 1
-    1.1875 * 16 * 1 = 19pt
-
-    <desired-pt-size>/<text-unit>/16 * 16
-    48/19/16 * 16
-
-    <desired-pt-size>/<responsive-text-unit-in-px>/16 * 16
-    27/13/16 * 16
-   
-   */
-
-  /* 
 
     Font leading (line-height) & tracking (letter-spacing)
 

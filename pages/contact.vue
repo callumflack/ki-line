@@ -1,15 +1,13 @@
 <template lang="pug">
 div
   header.Header.b-pb2
-    .AspectRatio.AspectRatio--3x1
+    .AspectRatio.sm-AspectRatio--4x3.mdl-AspectRatio--3x1
       .AspectRatio-object
         img(src="/images2/hero-dusktips.jpg", alt="Gladness")
       .AspectRatio-object.HeroBlend.f.f-childrenCenter
         div
-          .Container
-            //- h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Be heard
-            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg The answers are already within us. Sometimes we need help to uncover them.
-
+          .GutterInsetX
+            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Upgrade to simple.
 
   section.b-pb2
     .Container.Header--animate

@@ -1,13 +1,12 @@
 <template lang="pug">
 div
   header.Header.b-pb2
-    .AspectRatio.AspectRatio--3x1
+    .AspectRatio.sm-AspectRatio--4x3.mdl-AspectRatio--3x1
       .AspectRatio-object
         img(src="/images2/hero-shorebeyond.jpg", alt="Gladness")
       .AspectRatio-object.HeroBlend.f.f-childrenCenter
         div
-          .Container
-            //- h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Your ally in transition
+          .GutterInsetX
             h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Who looks outside, dreams.#[br]Who looks inside, awakens.
             p.fs-text-sm.fs-italic.c-bg.u-textCenter — Carl Jung
 

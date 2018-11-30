@@ -29,8 +29,7 @@ export default {
   css: ["~/assets/styles/application.css"],
 
   /* 
-    You cannot use path aliases here (~ and @), you need to use relative or absolute paths.
-    So it must be a dot!
+    You cannot use path aliases here (~ and @), you need to use relative or absolute paths. So it must be a dot!
     https://github.com/nuxt-community/style-resources-module
   */
   styleResources: {

@@ -119,8 +119,28 @@
 
 */
 
-.AspectRatio--4x1 {
-  padding-bottom: calc(100% / 4);
+.sm-AspectRatio--4x3 {
+  @media (--sm) {
+    padding-bottom: 75%;
+  }
+}
+
+.mdl-AspectRatio--3x1 {
+  @media (--mdl) {
+    padding-bottom: calc(100% / 3);
+  }
+}
+
+.mdl-AspectRatio--10x4 {
+  @media (--mdl) {
+    padding-bottom: 40%;
+  }
+}
+
+.b-sm-mb4 {
+  @media (--sm) {
+    margin-bottom: calc(4 * var(--rs-block-space));
+  }
 }
 
 .bg-neutral-blue {

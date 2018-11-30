@@ -57,7 +57,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("~static/fonts/LyonDisplay-Regular.otf") format("woff");
-  src: url("~static/fonts/AttenNew-Medium.otf") format("woff");
+  src: url("~static/fonts/AttenNew-Book.otf") format("woff");
 }
 @font-face {
   font-family: var(--ff-title);

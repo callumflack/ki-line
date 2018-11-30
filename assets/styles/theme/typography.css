@@ -107,22 +107,19 @@ ol,
   font-weight: 700;
 }
 
-.Title,
-.Supertitle {
+.Title {
+  font-size: 27px;
 }
 
 .Supertitle {
-  font-family: "Super", var(--ff-stack-text);
+  font-family: var(--ff-title), var(--ff-stack-heading);
   font-size: var(--rfs-supertitle);
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  letter-spacing: 1px;
+  font-weight: 300;
+  letter-spacing: 0.5em;
   line-height: 1.2;
-  /* text-transform: uppercase; */
-  font-size: 44px;
-  /* transform: translateY(-20px); */
+  text-transform: uppercase;
 }
 
 .Supertitle--shadow {
-  text-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.7), 0 0.5em 1em rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.25), 0 0.5em 1em rgba(0, 0, 0, 0.125);
 }

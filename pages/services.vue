@@ -1,16 +1,13 @@
 <template lang="pug">
 div
   header.Header.b-pb2
-    .AspectRatio.AspectRatio--3x1
+    .AspectRatio.sm-AspectRatio--4x3.mdl-AspectRatio--3x1
       .AspectRatio-object
-        img(src="/images2/hero-orange.jpg", alt="Gladness")
+        img(src="/images2/hero-orange-cut.jpg", alt="Gladness")
       .AspectRatio-object.HeroBlend.f.f-childrenCenter
         div
-          .Container
-            //- h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg How Ki helps you change
-            h1.Supertitle.Supertitle--shadow.c-bg.u-textCenter When you want something, all the universe conspires in helping you to achieve it.
-            p.fs-text-sm.fs-italic.c-bg.u-textCenter — Paulo Coelho
-
+          .GutterInsetX
+            h1.Supertitle.Supertitle--shadow.c-bg.u-textCenter Envision. Empower. Succeed.
 
   section.b-pb2
     .Container.Container--lg.Header--animate

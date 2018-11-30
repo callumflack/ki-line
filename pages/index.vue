@@ -1,21 +1,17 @@
 <template lang="pug">
 div
   header.Header.b-pb2
-    .AspectRatio.AspectRatio--3x1
+    .AspectRatio.sm-AspectRatio--4x3.mdl-AspectRatio--10x4
       .AspectRatio-object
-        img(src="/images2/hero-whitetips.jpg", alt="Gladness")
-      .AspectRatio-object.HeroBlend.f.f-childrenCenter
-        //- .b-pb2.w-100.f-expandTop
-        div
-          .Container.Container--lg
-            //- .b-mb05.u-textCenter
-              IconBase.c-bg(icon-name="icon-iso" height="36" width="36")
-                IconIso
-            //-h1.Supertitle.u-textCenter.c-bg I’m glad you’re here.
-            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg For powerful conversations you can't have with anyone else
-            //- h2.Text.fs-text-lg.fw-500.fs-italic.u-textCenter.c-bg
-              //- | The answers are already within us. Sometimes we need help to uncover them.
-              | For powerful conversations you can't have with anyone else, talk to Ki.
+        img(src="/images2/tobias-keller-99139-unsplash2.jpg", alt="Gladness")
+      .AspectRatio-object.HeroIndex-blend.f.f-childrenCenter
+        .GutterInsetX.b-mb2.b-sm-mb4
+          h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg.m-b0
+            | I'm glad you're here.
+          hr.w-1x3.w-sm-1x6.w-lg-1x12.bg-bg.m-xA.b-mt05.b-mb075
+          h2.Meta.Supertitle--shadow.c-bg.u-textCenter
+            | For powerful conversations you can't have#[br]
+            | with anyone else, talk to Ki.
 
   section.b-pb2
     .Container.Header--animate
@@ -181,6 +177,21 @@ export default {
 
 <style lang="postcss" scoped>
 @import "../assets/styles/variables.css";
+
+.HeroIndex-blend {
+  background-blend-mode: multiply;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+.HeroIndex-rule {
+  margin: auto;
+  width: 15%;
+}
 
 .Heights {
   background-image: url("/images2/heights3.jpg");
