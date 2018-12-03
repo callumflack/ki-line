@@ -63,6 +63,10 @@ p a.c-brand:not(.Button),
   --underline: var(--c-brand);
 }
 
+.Slider p a:not(.Button) {
+  text-shadow: initial;
+}
+
 /* 
 
   Nuxt + BlockLinks

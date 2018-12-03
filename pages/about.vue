@@ -7,8 +7,8 @@ div
       .AspectRatio-object.HeroBlend.f.f-childrenCenter
         div
           .GutterInsetX
-            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Who looks outside, dreams.#[br]Who looks inside, awakens.
-            p.fs-text-sm.fs-italic.c-bg.u-textCenter — Carl Jung
+            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg No one can touch your essence.
+            //- p.fs-text-sm.fs-italic.c-bg.u-textCenter — Carl Jung
 
   section.b-pb2
     .Container.Header--animate
