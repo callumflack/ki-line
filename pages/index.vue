@@ -21,7 +21,7 @@ div
         h5.Meta.Meta--rule.u-textCenter.b-mt05 
           span The Ki Line
       .fs-block-lg
-        p The Ki Line is a quite place that gives you the space to be heard. Where you can come to breathe, lean into uncertainty and stretch into discomfort in a safe, protected environment. The answers are already within us. Sometimes we need help to uncover them. The Ki Line is that help. 
+        p The Ki Line is a quiet place that gives you the space to be heard. Where you can come to breathe, lean into uncertainty and stretch into discomfort in a safe, protected environment. The answers are already within us. Sometimes we need help to uncover them. The Ki Line is that help. 
         p Hi, I'm Ki Woyke. The Ki Line is my way to help people who might be stuck and need powerful conversations to discovery their potential and their calling. I hold in-person coaching for groups and individuals in the Greater Seattle Area, Washington. I also hold online coaching for groups and individuals worldwide via video. 
         p 
           | My specialty is working with introverts. I also work with life transitions and high contrast relationships, and I provide Energy Leadership™ Assessments. 

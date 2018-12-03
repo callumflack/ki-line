@@ -91,7 +91,13 @@ export default {
   head() {
     return {
       title: "About—The Ki Line",
-      description: "Stuff here…"
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "here…"
+        }
+      ]
     };
   }
 };

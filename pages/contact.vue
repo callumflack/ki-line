@@ -39,7 +39,13 @@ export default {
   head() {
     return {
       title: "Contact—The Ki Line",
-      description: "Stuff here…"
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "here…"
+        }
+      ]
     };
   }
 };
