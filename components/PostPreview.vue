@@ -5,7 +5,10 @@
         .AspectRatio-object
           img(:src="image", alt="Gladness")
       h2.Meta.bg-text.c-bg.p-x3.p-y2.b-y3(style="margin-top:1px") {{ title }}
-      p {{ excerpt }}
+      p 
+        | {{ excerpt }}
+        | 
+        em.c-brand Continue reading
 </template>
 
 <script>

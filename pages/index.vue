@@ -17,7 +17,7 @@ div
     .Container.Header--animate
       .b-mb1.u-textCenter
         IconBase(icon-name="icon-container" height="36" width="36")
-          IconIso
+          IconContainer
         h3.Meta.Meta--rule.u-textCenter.b-mt05 
           span The Ki Line
       div

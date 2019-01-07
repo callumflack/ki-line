@@ -12,8 +12,8 @@ div.b-pt2
   section.b-pb2
     .Container.Header--animate
       .b-mb1.u-textCenter
-        IconBase(icon-name="icon-iso" height="36" width="36")
-          IconIso
+        IconBase(icon-name="icon-turn" height="36" width="36")
+          IconTurn
         h3.Meta.Meta--rule.u-textCenter.b-mt05 
           span The Ki Line blog
 
@@ -31,13 +31,13 @@ div.b-pt2
 
 <script>
 import IconBase from "~/components/IconBase";
-import IconIso from "~/components/icons/IconIso";
+import IconTurn from "~/components/icons/IconTurn";
 import PostPreview from "@/components/PostPreview";
 
 export default {
   components: {
     IconBase,
-    IconIso,
+    IconTurn,
     PostPreview
   },
   asyncData(context) {
@@ -47,7 +47,7 @@ export default {
         starts_with: "blog/"
       })
       .then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         return {
           posts: res.data.stories.map(bp => {
             return {
