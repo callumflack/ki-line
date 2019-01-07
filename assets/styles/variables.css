@@ -24,8 +24,10 @@
    */
 
   --space: 1rem;
-  --grid-gutter: calc(1.5 * var(--rs-space));
-  --flex-grid-gutter: calc(1.5 * var(--rs-space));
+  --grid-gutter: calc(1.5 * var(--space));
+  --flex-grid-gutter: calc(1.5 * var(--space));
+  --flex-grid-gutter-sm: var(--s-2);
+  --flex-grid-gutter-lg: 3vw;
 
   --container-sm: calc(540px + (2 * var(--grid-gutter)));
   --container-rg: calc(760px + (2 * var(--grid-gutter)));
@@ -45,7 +47,7 @@
   --s-7: calc(16 * var(--rs-space));
 
   --s-paragraph: calc(1.25 * var(--rs-space));
-  --s-headline: calc(2 * var(--paragraph));
+  --s-headline: calc(2.5 * var(--rs-space));
 
   /* 
   
@@ -146,7 +148,7 @@
   --horizontal-rule-space: var(--s-paragraph);
   --html-c: var(--c-text);
   --html-bg: var(--c-bg);
-  --inline-block-children-space: calc(1 * var(--s-3a));
+  --inline-block-children-space: calc(1.1 * var(--rs-space));
   --list-inset-padding: calc(1.5 * var(--rs-space));
   --list-style-type: disc;
   --progress-height: 32px;

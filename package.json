@@ -18,6 +18,7 @@
     "iremono": "callumflack/iremono#experiments",
     "jstransformer-markdown-it": "^2.1.0",
     "nuxt": "^2.3.1",
+    "storyblok-nuxt": "^1.0.1",
     "vue-tiny-slider": "^0.1.30"
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "eslint": "^4.15.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
+    "nodemon": "^1.18.9",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0"
   }

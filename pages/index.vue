@@ -7,8 +7,8 @@ div
       .AspectRatio-object.HeroIndex-blend.f.f-childrenCenter
         .GutterInsetX.b-mb2.b-sm-mb4
           h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg.m-b0
-            | I'm glad you're here.
-          hr.w-1x3.w-sm-1x6.w-lg-1x12.bg-bg.m-xA.b-mt05.b-mb075
+            | I'm glad you're here
+          hr.w-1x3.w-sm-1x6.w-lg-1x12.bg-bg.m-xA.b-mt075.b-mb1
           h2.Meta.Supertitle--shadow.c-bg.u-textCenter
             | For powerful conversations you can't have#[br]
             | with anyone else, talk to Ki.
@@ -17,30 +17,31 @@ div
     .Container.Header--animate
       .b-mb1.u-textCenter
         IconBase(icon-name="icon-container" height="36" width="36")
-          IconContainer
-        h5.Meta.Meta--rule.u-textCenter.b-mt05 
+          IconIso
+        h3.Meta.Meta--rule.u-textCenter.b-mt05 
           span The Ki Line
-      .fs-block-lg
+      div
         p The Ki Line is a quiet place that gives you the space to be heard. Where you can come to breathe, lean into uncertainty and stretch into discomfort in a safe, protected environment. The answers are already within us. Sometimes we need help to uncover them. The Ki Line is that help. 
         p Hi, I'm Ki Woyke. The Ki Line is my way to help people who might be stuck and need powerful conversations to discovery their potential and their calling. I hold in-person coaching for groups and individuals in the Greater Seattle Area, Washington. I also hold online coaching for groups and individuals worldwide via video. 
         p 
           | My specialty is working with introverts. I also work with life transitions and high contrast relationships, and I provide Energy Leadership™ Assessments. 
           nuxt-link.fs-italic.fw-60.c-brand(to="/services") Learn more… 
 
-      .b-mt1
+      .b-mt1.mo-Extract-super
         .AspectRatio.AspectRatio--7x5
           .AspectRatio-object
             nuxt-link(to="/services")
               img(src="/images2/services-map.jpg", alt="Services")
 
-  section.b-pb3
+  section.b-pb2
     .Container
       .b-mb1.u-textCenter
         IconBase(icon-name="icon-container" height="36" width="36")
           IconPyramid
-        h5.Meta.Meta--rule.u-textCenter.b-mt05 
+        h3.Meta.Meta--rule.u-textCenter.b-mt05 
           span About Ki
-      .fs-block-lg
+      
+      div
         .ParagraphImage.w-1x3.w-lg-3x12.m-r6.p-b3
           img(src="/images2/ki-recut.jpg", alt="")
         p 
@@ -49,10 +50,10 @@ div
           nuxt-link.fs-italic.fw-60.c-brand(to="/about") Learn more… 
 
   section.b-pb2
-    .b-py4.bg-neutral-blue.CoverImage.Heights
+    .b-py2.bg-neutral-blue.CoverImage.Heights
       .Container
         .b-mb1.u-textCenter
-          h5.Meta.Meta--ruleOnImage.u-textCenter
+          h3.Meta.Meta--ruleOnImage.u-textCenter
             span What people say
         
         .Slider
@@ -60,10 +61,9 @@ div
             //- vue-tiny-slider(:mouse-drag="true" :loop="false" items="2" gutter="20")
             vue-tiny-slider(v-bind="tinySliderOptions")
               .Slide(v-for="item in quotes" :key="item.author")
-                .fs-block-lg
-                  p(v-html="item.quote")
-                  p.Meta.m-b1.u-textCenter {{ item.author }} 
-                  p.fs-text-sm.fs-italic.u-textCenter {{ item.place }}
+                p(v-html="item.quote")
+                p.Meta.m-b1.u-textCenter {{ item.author }} 
+                p.fs-text-sm.fs-italic.u-textCenter {{ item.place }}
 
 </template>
 

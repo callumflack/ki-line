@@ -4,7 +4,7 @@
   //- div(:class="currentPageClass.slice(4)")
   //- div(:class="currentPageClass.split('-/').join('-')")
   .u-relative
-    Nav
+    Nav(:class="reverseOutClass")
     nuxt
     Footer
 
@@ -26,18 +26,18 @@ export default {
       // return `fs-scale-reset page-${this.$store.state.currentPage}`;
       return `page-${this.$store.state.currentPage}`;
       // return [{ home: $store.state.currentPage === "/" }];
+    },
+    reverseOutClass() {
+      if (!this.$route.name.includes("blog")) {
+        return "Nav--white";
+      }
     }
   }
 };
 </script>
 
 <style scoped>
-/* .CFd {
-  bottom: calc(2.25 * var(--rs-block-space));
-  right: calc(0.5 * var(--rs-block-space));
-  right: 0;
-  color: var(--c-text-mid);
-  position: absolute;
-  transform: rotate(-90deg);
-} */
+.Nav--white >>> .Nav-link {
+  color: var(--c-bg);
+}
 </style>

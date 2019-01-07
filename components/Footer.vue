@@ -4,10 +4,10 @@ footer.Footer.b-pb2.ffs-block
     .b-mb1.u-textCenter
       IconBase(icon-name="icon-bowl" height="36" width="36")
         IconBowl
-      h5.Meta.Meta--rule.u-textCenter.b-mt05 
+      h3.Meta.Meta--rule.u-textCenter.b-mt05 
         //- span Get in touch
         span Talk to Ki
-    .b-mb1.fs-block-lg
+    .b-mb2
       p I hold in-person coaching for groups and individuals in the Greater Seattle Area, Washington. I also hold online coaching for groups and individuals worldwide via video. To see if I can help you, please get in touch:
       //- ul
         li #[a.c-brand.fs-italic(href="tel:716-704-2072") Call 716 704 2072]
@@ -26,10 +26,10 @@ footer.Footer.b-pb2.ffs-block
       a.u-linkClean.m-r3(:href="`mailto:${contacts.email}`") {{ contacts.email }}
       a.u-linkClean(href="contacts.calendly" target="_blank") Calendly
 
-    p.fs-text-sm.fs-italic.c-text-ligh.u-textCenter
+    p.fs-text-sm.fs-italic.c-text-light.u-textCenter
       //- | Copyright ©2018 Ki Woyke
       //- span.m-x2 •
-      a.u-linkClean.c-text-light(target="_blank" href="http://callumflack.design") Site by Callum Flack Design
+      a.u-linkClean.c-text-ligh(target="_blank" href="http://callumflack.design") Site by Callum Flack Design
 
 </template>
 

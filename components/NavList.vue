@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style>
+@import "../assets/styles/variables.css";
+
 .Nav-link {
   align-items: center;
   display: inline-flex;
@@ -52,5 +54,9 @@ export default {
 
 .Nav-link + .Nav-link {
   margin-left: var(--inline-block-children-space);
+
+  @media (--mo) {
+    margin-left: calc(0.75 * var(--inline-block-children-space));
+  }
 }
 </style>

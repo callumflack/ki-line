@@ -47,11 +47,15 @@ export default {
   plugins: [
     /* { src: "~/plugins/aos", ssr: false } */
     /* { src: "~/plugins/headroom", ssr: false } */
-    { src: "~/plugins/vue-scroll-reveal", ssr: false },
+    /* { src: "~/plugins/vue-scroll-reveal", ssr: false }, */
     { src: "~/plugins/vue-tiny-slider", ssr: false }
   ],
 
-  modules: [["@nuxtjs/google-tag-manager", { id: "GTM-PTQSCT3" }], "@nuxtjs/style-resources"],
+  modules: [
+    ["storyblok-nuxt", { accessToken: "KMpFebbWQbmS5wF3TvfQOAtt", cacheProvider: "memory" }],
+    ["@nuxtjs/google-tag-manager", { id: "GTM-PTQSCT3" }],
+    "@nuxtjs/style-resources"
+  ],
 
   /* https://github.com/nuxt-community/axios-module#options */
   /* axios: {}, */

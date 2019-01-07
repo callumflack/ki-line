@@ -31,7 +31,10 @@ export default {
   },
   methods: {
     handleNavToggle() {
-      this.$store.commit("SET_MOBILENAV_VISIBILITY", !this.$store.state.isMobileNavVisible);
+      this.$store.commit(
+        "SET_MOBILENAV_VISIBILITY",
+        !this.$store.state.isMobileNavVisible
+      );
       // this.navBar.static = this.$store.state.isMobileNavVisible;
       /* to NavFixedOnScroll via $emit: */
       this.$emit("emitMobileNavIsToggled");
@@ -48,9 +51,5 @@ export default {
   top: 0;
   width: 100%;
   z-index: 999;
-}
-
-.Nav >>> .Nav-link {
-  color: var(--c-bg);
 }
 </style>

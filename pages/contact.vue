@@ -7,7 +7,7 @@ div
       .AspectRatio-object.HeroBlend.f.f-childrenCenter
         div
           .GutterInsetX
-            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Upgrade to simple.
+            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Upgrade to simple
 
   section.b-pb2
     .Container.Header--animate
@@ -16,7 +16,7 @@ div
           IconBowl
         h5.Meta.Meta--rule.u-textCenter.b-mt05 
           span Talk to Ki
-      .fs-block-lg
+      div
         p I hold in-person coaching for groups and individuals in the Greater Seattle Area, Washington. I also hold online coaching for groups and individuals worldwide via video. To see if I can help you, please get in touch:
         ul
           li #[a.c-brand.fs-italic(href="tel:716-704-2072") Call 716 704 2072]

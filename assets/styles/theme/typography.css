@@ -9,9 +9,16 @@
 p,
 ul,
 ol,
+h2,
 .Text {
   font-size: var(--rfs-text);
   letter-spacing: var(--fls-regular);
+}
+
+.fs-text-sm {
+  @media (--mo) {
+    font-size: calc(var(--rfs-text-sm) + 1px) !important;
+  }
 }
 
 /* 
@@ -93,7 +100,6 @@ ol,
  */
 
 .Heading,
-.Subtitle,
 .Title,
 .Supertitle {
   font-family: var(--ff-title), var(--ff-stack-text);
@@ -107,19 +113,44 @@ ol,
   font-weight: 700;
 }
 
-.Title {
-  font-size: 27px;
-}
-
+.Title,
 .Supertitle {
   font-family: var(--ff-title), var(--ff-stack-heading);
-  font-size: var(--rfs-supertitle);
-  font-weight: 300;
+  font-size: var(--rfs-title);
+  font-weight: 500;
   letter-spacing: 0.5em;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
+.Supertitle {
+  font-size: var(--rfs-supertitle);
+}
+
 .Supertitle--shadow {
-  text-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.25), 0 0.5em 1em rgba(0, 0, 0, 0.125);
+  text-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.25), 0 0.5em 1em rgba(0, 0, 0, 0.1);
+}
+
+/* 
+
+  Markdown scope
+
+ */
+
+.Scope-post {
+  & * {
+    white-space: pre-line;
+  }
+
+  & h2 {
+    font-size: var(--rfs-text-lg);
+    font-style: italic;
+    /* font-weight: 700; */
+    line-height: var(--flh-regular);
+  }
+
+  & em {
+    font-style: italic;
+    font-weight: 600;
+  }
 }

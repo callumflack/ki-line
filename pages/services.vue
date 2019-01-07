@@ -24,8 +24,7 @@ div
               .AspectRatio-object
                 img.Filter(:src="item.image", :alt="item.title")
             h2.Meta.bg-text.c-bg.p-x3.p-y2.b-y3(style="margin-top:1px") {{ item.title }}
-            .fs-block-lg
-              p(v-html="item.lede")
+            p(v-html="item.lede")
 
 </template>
 
