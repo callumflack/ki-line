@@ -1,5 +1,5 @@
 <template lang="pug">
-article.b-py2
+article.b-py2(v-editable="blok")
   header.Header.b-pb1
     .Container.Container--lg.mo-Extract-super 
       //- .bg-text.c-bg.p-x3.p-y2.b-y3.u-textCenter(style="margin-bottom:1px")
@@ -38,12 +38,24 @@ export default {
       .then(res => {
         // console.log(res.data);
         return {
+          blok: res.data.story.content,
           image: res.data.story.content.image,
           title: res.data.story.content.title,
           content: res.data.story.content.content,
           contentNote: res.data.story.content.contentNote
         };
       });
+  },
+  mounted() {
+    this.$storybridge.on(["input", "published", "change"], event => {
+      if (event.action == "input") {
+        if (event.story.id === this.story.id) {
+          this.story.content = event.story.content;
+        }
+      } else {
+        window.location.reload();
+      }
+    });
   }
 };
 </script>
