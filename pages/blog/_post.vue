@@ -8,6 +8,7 @@ article.b-py2.Header--animate(v-editable="blok")
       .AspectRatio.AspectRatio--16x9
         .AspectRatio-object
           img(:src="image", alt="Gladness")
+          //- img(:src="resize(post.content.image, '700x200')" :alt="post.content.image_alt")
         .AspectRatio-object.HeroBlend.f.f-childrenCenter
           .GutterInsetX
             h1.Title.Supertitle--shadow.u-textCenter.c-bg {{ title }}

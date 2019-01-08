@@ -11,6 +11,13 @@ export function resize(str, param) {
     : str.replace(/a.storybridge.com/g, "img2.storybridge.com/" + param);
 }
 
+// Vue.filter("resize", (image, size) => {
+//   if (typeof image !== "undefined") {
+//     return "//img2.storyblok.com/" + size + image.replace("//a.storyblok.com", "");
+//   }
+//   return null;
+// });
+
 /* $storybridge.init() is outdated — doesn't work */
 export function isEditMode(app) {
   // Want to know more about this? https://www.storybridge.com/docs/Guides/storybridge-latest-js
