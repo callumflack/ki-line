@@ -1,8 +1,8 @@
-# Edge Hill Butchery website
+# The Ki Line website
 
-URL: edgehillbutchery.com.au
+URL: thekiline.com
 
-Staging URL: edgehillbutchery.now.sh
+Staging URL: thekiline.now.sh
 
 ## Build Setup
 
