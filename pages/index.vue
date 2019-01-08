@@ -214,10 +214,11 @@ export default {
 }
 
 .Slider >>> .tns-nav button {
+  background-color: rgba(0, 0, 0, 0.25);
   border-radius: 999px;
   height: 0.5em;
+  margin-bottom: 0;
   width: 0.5em;
-  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .Slider >>> .tns-nav button + button {
