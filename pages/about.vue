@@ -44,10 +44,23 @@ div
             p.fs-text-sm.m-t2 Associate Certified Coach (ACC, accredited by the International Coaching Certification)
 
           .Credential.w-1x2.w-sm-1x3
-            img(src="/images2/credential-ELi-bw.png", alt="Institute for Excellence in Coaching, iPEC")
+            //- img(src="/images2/credential-ELi-bw.png", alt="Master Practitioner, Energy Leadership Index")
+            //- p.fs-text-sm.m-t2 Master Practitioner, Energy Leadership Index
+            img(src="/images2/credential-MA-bw.png", alt="M.A. Master's degree in American and Oriental Studies")
             p.fs-text-sm.m-t2 M.A. Master's degree in American and Oriental Studies
 
           .Credential.w-1x2.w-sm-1x3.u-sm-hidden
+
+        //- :markdown-it()
+          ## Education
+          
+        //- .FlexGrid.FlexGrid--sm.FlexGrid--retainGrid
+          .Credential.w-1x2.w-sm-1x3
+            img(src="/images2/credential-ELi-bw.png", alt="Institute for Excellence in Coaching, iPEC")
+            p.fs-text-sm.m-t2 M.A. Master's degree in American and Oriental Studies
+
+          .Credential.w-1x2.w-sm-1x3
+          .Credential.w-1x2.w-sm-1x3.u-mo-hidden
 
         :markdown-it()
           ## Publications
@@ -78,19 +91,19 @@ div
             .m-b4.mo-Extract-super
               img(src="/images2/approach-map-2-1.jpg", alt="Envision phase")
             :markdown-it()
-              From tunnel vision to the big picture: in the _envision_ phase, we explore where you are. We map where you want to be, and see what else is there. This phase brings out hidden gems, gifts, new talents, relevant life history, backburner dreams, and connects mind, body, heart, and gut. 
+              From tunnel vision to the big picture: in the _**envision**_ phase, we explore where you are. We map where you want to be, and see what else is there. This phase brings out hidden gems, gifts, new talents, relevant life history, backburner dreams, and connects mind, body, heart, and gut. 
 
           .b-mb075
             .m-b4.mo-Extract-super
               img(src="/images2/approach-map-2-2.jpg", alt="Empower phase")
             :markdown-it()
-              Redesigning your foundation, shaping the goal, mapping your steps to the top: the _empower_ phase gets practical. You commit to action and tell me how you want to be held accountable. While you see small results immediately, true transformation happens with consistent action over time.
+              Redesigning your foundation, shaping the goal, mapping your steps to the top: the _**empower**_ phase gets practical. You commit to action and tell me how you want to be held accountable. While you see small results immediately, true transformation happens with consistent action over time.
 
           .b-mb075
             .m-b4.mo-Extract-super
               img(src="/images2/approach-map-2-3.jpg", alt="Momentum phase")
             :markdown-it()
-              _Success_ is not a point, it is, like envision and empower, a phase. This is where flow doesn’t just happen but is generated with purpose. This is where momentum carries your project or vision to a tangible place. The experience is different for everyone. What unites all is the experience of a shift in energy and awareness. Here is where you make change work in your favor and design a strategy that will help you maintain the momentum.
+              _**Success**_ is not a point, it is, like envision and empower, a phase. This is where flow doesn’t just happen but is generated with purpose. This is where momentum carries your project or vision to a tangible place. The experience is different for everyone. What unites all is the experience of a shift in energy and awareness. Here is where you make change work in your favor and design a strategy that will help you maintain the momentum.
 
 </template>
 
@@ -135,10 +148,6 @@ export default {
   mix-blend-mode: multiply;
   margin: auto;
   max-width: 70%;
-
-  /* @media (--mo) {
-    max-width: 80%;
-  } */
 }
 
 .Meta--ruleOnImage {
