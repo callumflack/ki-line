@@ -27,7 +27,8 @@ p a:active,
 p a:not(.Button),
 li a,
 .Link,
-.Link-block a {
+.Link-block a,
+.FakeLink {
   --underline-space: var(--c-bg);
   --underline: var(--c-gray);
   --underline-hover: currentColor;
@@ -58,6 +59,7 @@ li a,
   --underline-space: var(--c-neutral);
 }
 
+.FakeLink.c-brand:not(.Button),
 p a.c-brand:not(.Button),
 .c-brand:not(.Button) {
   --underline: var(--c-brand);

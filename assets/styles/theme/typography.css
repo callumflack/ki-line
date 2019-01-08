@@ -15,11 +15,11 @@ h2,
   letter-spacing: var(--fls-regular);
 }
 
-.fs-text-sm {
+/* .fs-text-sm {
   @media (--mo) {
     font-size: calc(var(--rfs-text-sm) + 1px) !important;
   }
-}
+} */
 
 /* 
   -------------------------------------------------
@@ -33,7 +33,7 @@ h2,
 
 .Meta {
   font-family: var(--ff-meta), var(--ff-stack-heading);
-  font-size: var(--rfs-text-sm);
+  font-size: var(--rfs-text-xs);
   font-weight: 700;
   letter-spacing: var(--fls-loose);
   text-transform: uppercase;
@@ -138,10 +138,6 @@ h2,
  */
 
 .Scope-post {
-  & * {
-    white-space: pre-line;
-  }
-
   & h2 {
     font-size: var(--rfs-text-lg);
     font-style: italic;
@@ -151,6 +147,43 @@ h2,
 
   & em {
     font-style: italic;
+  }
+
+  & strong {
     font-weight: 600;
+  }
+
+  & blockquote p {
+    border-left: 1px solid var(--c-rule);
+    font-family: var(--ff-text), var(--ff-stack-serif);
+    font-style: italic;
+    padding-left: var(--text-indent);
+
+    & p {
+      border: initial;
+      padding: initial;
+    }
+  }
+}
+
+.Scope-post-dropcap > p:first-of-type:first-letter {
+  /* border: 1px solid var(--c-text); */
+  float: left;
+  font-family: var(--ff-title), var(--ff-stack-sans);
+  font-weight: 400;
+  font-size: calc(2 * var(--rfs-text));
+  line-height: 1;
+  /* padding-top: 0;
+  padding-top: 3px;
+  padding-right: 0.7em;
+  padding-bottom: 0.25em; */
+
+  @media (--md) {
+    font-size: 2.75em;
+  }
+  @media (--lg) {
+    font-size: 3em;
+    margin: 0 0.25em 0.25em 0;
+    /* padding: 0.1em 0.2em 0.09em; */
   }
 }

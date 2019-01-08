@@ -63,8 +63,8 @@
  */
 
 :root {
-  --rfs-text-xs: 10px;
-  --rfs-text-sm: 11px;
+  --rfs-text-xs: 11px;
+  --rfs-text-sm: 13px;
   --rfs-text: 16px;
   --rfs-text-lg: 20px;
   --rfs-heading: 16px;
@@ -73,8 +73,8 @@
 }
 @media (--sm) {
   :root {
-    --rfs-text-xs: 12px;
-    --rfs-text-sm: 13px;
+    --rfs-text-xs: 13px;
+    --rfs-text-sm: 14px;
     --rfs-text: 20px;
     --rfs-text-lg: 24px;
     --rfs-heading: 24px;
@@ -89,8 +89,8 @@
 }
 @media (--lg) {
   :root {
-    --rfs-text-xs: 13px;
-    --rfs-text-sm: 14px;
+    --rfs-text-xs: 14px;
+    --rfs-text-sm: 15px;
     --rfs-text: 21px;
     --rfs-text-lg: 25px;
     --rfs-heading: 30px;

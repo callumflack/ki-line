@@ -26,7 +26,7 @@
   --space: 1rem;
   --grid-gutter: calc(1.5 * var(--space));
   --flex-grid-gutter: calc(1.5 * var(--space));
-  --flex-grid-gutter-sm: var(--s-2);
+  --flex-grid-gutter-sm: var(--s-3);
   --flex-grid-gutter-lg: 3vw;
 
   --container-sm: calc(540px + (2 * var(--grid-gutter)));
@@ -47,7 +47,7 @@
   --s-7: calc(16 * var(--rs-space));
 
   --s-paragraph: calc(1.25 * var(--rs-space));
-  --s-headline: calc(2.5 * var(--rs-space));
+  --s-headline: calc(3.125 * var(--rs-space));
 
   /* 
   
@@ -153,6 +153,7 @@
   --list-style-type: disc;
   --progress-height: 32px;
   --text-link-decoration: none;
+  --text-indent: var(--s-4);
 
   /* 
 
