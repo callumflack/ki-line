@@ -12,12 +12,12 @@ div.b-pt2
   section.b-pb2
     .Container.Header--animate
       .b-mb1.u-textCenter
-        IconBase(icon-name="icon-turn" height="36" width="36")
-          IconTurn
+        IconBase(icon-name="icon-iso" height="36" width="36")
+          IconIso
         h3.Meta.Meta--rule.u-textCenter.b-mt05 
           span The Ki Line blog
 
-      .FlexGrid
+      .FlexGrid.FlexGrid--noGrow
         PostPreview(
           v-for="post in posts"
           :key="post.id"
@@ -31,19 +31,19 @@ div.b-pt2
 
 <script>
 import IconBase from "~/components/IconBase";
-import IconTurn from "~/components/icons/IconTurn";
+import IconIso from "~/components/icons/IconIso";
 import PostPreview from "@/components/PostPreview";
 
 export default {
   components: {
     IconBase,
-    IconTurn,
+    IconIso,
     PostPreview
   },
   asyncData(context) {
     return context.app.$storyapi
       .get("cdn/stories", {
-        version: "draft",
+        version: context.isDev ? "draft" : "published",
         starts_with: "blog/"
       })
       .then(res => {

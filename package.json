@@ -15,10 +15,13 @@
   "dependencies": {
     "@nuxtjs/google-tag-manager": "^2.1.0",
     "@nuxtjs/style-resources": "^0.1.1",
+    "crypto": "^1.0.1",
     "iremono": "callumflack/iremono#experiments",
     "jstransformer-markdown-it": "^2.1.0",
+    "marked": "^0.6.0",
     "nuxt": "^2.3.1",
     "storyblok-nuxt": "^1.0.1",
+    "vue-moment": "^4.0.0",
     "vue-tiny-slider": "^0.1.30"
   },
   "devDependencies": {
@@ -27,7 +30,7 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "nodemon": "^1.18.9",
-    "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0"
+    "pug-plain-loader": "^1.0.0",
+    "pug": "^2.0.3"
   }
 }

@@ -1,5 +1,5 @@
 <template lang="pug">
-  nuxt-link.w-100.w-sm-1x2(:to="id")
+  nuxt-link.w-100.w-sm-1x2.b-pb075(:to="id")
     article
       .AspectRatio.AspectRatio--16x9
         .AspectRatio-object
@@ -8,7 +8,7 @@
       p 
         | {{ excerpt }}
         | 
-        em.c-brand Continue reading
+        em.FakeLink.c-brand Continue reading
 </template>
 
 <script>
@@ -35,9 +35,9 @@ export default {
 </script>
 
 <style scoped>
-a {
+/* a {
   text-decoration: none;
   color: black;
-}
+} */
 </style>
 

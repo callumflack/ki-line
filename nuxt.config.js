@@ -1,4 +1,5 @@
 /* import pkg from "./package.json"; */
+import axios from "axios";
 
 export default {
   mode: "universal",
@@ -40,22 +41,42 @@ export default {
     middleware: "currentPage"
   },
 
-  generate: {
-    routes: ["404"]
-  },
-
   plugins: [
     /* { src: "~/plugins/aos", ssr: false } */
     /* { src: "~/plugins/headroom", ssr: false } */
     /* { src: "~/plugins/vue-scroll-reveal", ssr: false }, */
-    { src: "~/plugins/vue-tiny-slider", ssr: false }
+    { src: "~/plugins/vue-tiny-slider", ssr: false },
+    "~/plugins/vue-moment",
+    "@/plugins/helper"
   ],
 
   modules: [
-    ["storyblok-nuxt", { accessToken: "KMpFebbWQbmS5wF3TvfQOAtt", cacheProvider: "memory" }],
+    [
+      "storyblok-nuxt",
+      {
+        accessToken:
+          process.env.NODE_ENV == "production" ? "9e6eqQOnLY3SC4kt5xogowtt" : "KMpFebbWQbmS5wF3TvfQOAtt",
+        cacheProvider: "memory"
+      }
+    ],
     ["@nuxtjs/google-tag-manager", { id: "GTM-PTQSCT3" }],
     "@nuxtjs/style-resources"
   ],
+
+  generate: {
+    // routes: ["404"]
+    routes: function() {
+      return axios
+        .get(
+          "https://api.storyblok.com/v1/cdn/stories?version=published&token=9e6eqQOnLY3SC4kt5xogowtt&starts_with=blog&cv=" +
+            Math.floor(Date.now() / 1e3)
+        )
+        .then(res => {
+          const blogPosts = res.data.stories.map(bp => bp.full_slug);
+          return ["/", "/blog", "/about", ...blogPosts];
+        });
+    }
+  },
 
   /* https://github.com/nuxt-community/axios-module#options */
   /* axios: {}, */
