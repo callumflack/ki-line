@@ -44,15 +44,16 @@ div
             p.fs-text-sm.m-t2 Associate Certified Coach (ACC, accredited by the International Coaching Certification)
 
           .Credential.w-1x2.w-sm-1x3
-            //- img(src="/images2/credential-ELi-bw.png", alt="Master Practitioner, Energy Leadership Index")
-            //- p.fs-text-sm.m-t2 Master Practitioner, Energy Leadership Index
-            img(src="/images2/credential-MA-bw.png", alt="M.A. Master's degree in American and Oriental Studies")
-            p.fs-text-sm.m-t2 M.A. Master's degree in American and Oriental Studies
+            img(src="/images2/credential-ELi-bw.png", alt="Master Practitioner, Energy Leadership Index")
+            p.fs-text-sm.m-t2 Master Practitioner, Energy Leadership Index
+            //- img(src="/images2/credential-MA-bw.png", alt="M.A. Master's degree in American and Oriental Studies")
+            //- p.fs-text-sm.m-t2 M.A. Master's degree in American and Oriental Studies
 
           .Credential.w-1x2.w-sm-1x3.u-sm-hidden
 
-        //- :markdown-it()
+        :markdown-it()
           ## Education
+          * M.A. Masters degree in American and Oriental Studies (University of Würzburg, Germany)
           
         //- .FlexGrid.FlexGrid--sm.FlexGrid--retainGrid
           .Credential.w-1x2.w-sm-1x3
@@ -103,7 +104,7 @@ div
             .m-b4.mo-Extract-super
               img(src="/images2/approach-map-2-3.jpg", alt="Momentum phase")
             :markdown-it()
-              _**Success**_ is not a point, it is, like envision and empower, a phase. This is where flow doesn’t just happen but is generated with purpose. This is where momentum carries your project or vision to a tangible place. The experience is different for everyone. What unites all is the experience of a shift in energy and awareness. Here is where you make change work in your favor and design a strategy that will help you maintain the momentum.
+              As you _**succeed**_, flow is generated with purpose.. This is where momentum carries your project or vision to a tangible place. The experience is different for everyone. What unites all is the experience of a shift in energy and awareness. Here is where you make change work in your favor and design a strategy that will help you maintain the momentum.
 
 </template>
 
