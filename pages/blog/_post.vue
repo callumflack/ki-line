@@ -5,13 +5,16 @@ article.b-py2.Header--animate(v-editable="blok")
       //- .bg-text.c-bg.p-x3.p-y2.b-y3.u-textCenter(style="margin-bottom:1px")
         IconBase.c-bg(icon-name="icon-turn" height="36" width="36" style="transform:translateY(2px)")
           IconTurn
-      .AspectRatio.AspectRatio--16x9
+      .AspectRatio.AspectRatio--2x1
         .AspectRatio-object
           img(:src="image", alt="Gladness")
           //- img(:src="resize(post.content.image, '700x200')" :alt="post.content.image_alt")
-        .AspectRatio-object.HeroBlend.f.f-childrenCenter
-          .GutterInsetX
-            h1.Title.Supertitle--shadow.u-textCenter.c-bg {{ title }}
+        .AspectRatio-object.HeroBlend
+          //- .f.f-alignItemsEnd.h-100
+            .GutterInsetX.b-pb1.w-100
+              //- h1.Title.flh-regular.Supertitle--shadow.u-textCenter.c-bg {{ title }}
+              h1.Meta.fs-text.u-textCenter.c-bg {{ title }}
+      h1.Meta.fs-text.u-textCenter.bg-black.c-bg.p-x4.p-y3.b-y4(style="margin-top:1px") {{ title }}
 
   .Container
     PostMarkdownContent(:content="content")
@@ -111,6 +114,17 @@ export default {
 
 <style scoped>
 @import "../../assets/styles/variables.css";
+
+.PostHeroBlend {
+  background-blend-mode: multiply;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
 
 .Avatar {
   border-radius: 999px;
