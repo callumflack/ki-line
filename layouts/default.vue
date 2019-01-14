@@ -28,9 +28,16 @@ export default {
       // return [{ home: $store.state.currentPage === "/" }];
     },
     reverseOutClass() {
-      if (!this.$route.name.includes("blog")) {
+      /* if (this.$nuxt.error.length > 1) {
+        return "";
+      } else  */
+
+      if (!this.$route.path.includes("/blog")) {
         return "Nav--white";
       }
+      /* if (!this.$route.name === "blog") {
+        return "Nav--white";
+      } */
     }
   }
 };
