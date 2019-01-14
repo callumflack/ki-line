@@ -4,10 +4,12 @@
       .AspectRatio.AspectRatio--16x9
         .AspectRatio-object
           img(:src="image", alt="Gladness")
-      h2.Meta.bg-text.c-bg.p-x3.p-y2.b-y3(style="margin-top:1px") {{ title }}
+      h2.Meta.bg-text.c-bg.p-x3.p-y2.b-y3.f.f-alignItemsBaseline(style="margin-top:1px") 
+        | {{ title }}
+        span.m-lA.p-l3
+          span.Arrow.Arrow--right
       p 
-        | {{ excerpt }}
-        | 
+        | {{ excerpt }} 
         em.FakeLink.c-brand Continue reading
 </template>
 
