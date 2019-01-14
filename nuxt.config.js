@@ -12,7 +12,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Transition coaching with Ki—make change work for you."
+        content:
+          "Transition coaching with Ki. Making change work for you. Alaska, Seattle and online worldwide."
       }
     ],
     link: [

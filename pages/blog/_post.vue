@@ -104,7 +104,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: `${this.title} — ${this.contentExcerpt}`
+          content: `${this.title} — The Ki Line Blog — ${this.contentExcerpt}`
         }
       ]
     };

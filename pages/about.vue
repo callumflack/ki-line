@@ -46,8 +46,6 @@ div
           .Credential.w-1x2.w-sm-1x3
             img(src="/images2/credential-ELi-bw.png", alt="Master Practitioner, Energy Leadership Index")
             p.fs-text-sm.m-t2 Master Practitioner, Energy Leadership Index
-            //- img(src="/images2/credential-MA-bw.png", alt="M.A. Master's degree in American and Oriental Studies")
-            //- p.fs-text-sm.m-t2 M.A. Master's degree in American and Oriental Studies
 
           .Credential.w-1x2.w-sm-1x3.u-sm-hidden
 
@@ -55,18 +53,10 @@ div
           ## Education
           * M.A. Masters degree in American and Oriental Studies (University of Würzburg, Germany)
           
-        //- .FlexGrid.FlexGrid--sm.FlexGrid--retainGrid
-          .Credential.w-1x2.w-sm-1x3
-            img(src="/images2/credential-ELi-bw.png", alt="Institute for Excellence in Coaching, iPEC")
-            p.fs-text-sm.m-t2 M.A. Master's degree in American and Oriental Studies
-
-          .Credential.w-1x2.w-sm-1x3
-          .Credential.w-1x2.w-sm-1x3.u-mo-hidden
-
         :markdown-it()
           ## Publications
-          * Seven Northern Lights: A Guide to Thrive in Transition (2017)
-          * Echoes of Black Holes Eating Stars: A Survivor's Memoir (2019)
+          * [Seven Northern Lights: A Guide to Thrive in Transition](https://www.amazon.com/Seven-Northern-Lights-Thrive-Transition-ebook/dp/B073TBC7C2) (2017)
+          * Echoes of Black Holes Eating Stars: A Survivor's Memoir (coming soon)
 
         //- hr.bg-rule
 
@@ -104,7 +94,7 @@ div
             .m-b4.mo-Extract-super
               img(src="/images2/approach-map-2-3.jpg", alt="Momentum phase")
             :markdown-it()
-              As you _**succeed**_, flow is generated with purpose.. This is where momentum carries your project or vision to a tangible place. The experience is different for everyone. What unites all is the experience of a shift in energy and awareness. Here is where you make change work in your favor and design a strategy that will help you maintain the momentum.
+              As you _**succeed**_, flow is generated with purpose. This is where momentum carries your project or vision to a tangible place. The experience is different for everyone. What unites all is the experience of a shift in energy and awareness. Here is where you make change work in your favor and design a strategy that will help you maintain the momentum.
 
 </template>
 
@@ -127,12 +117,14 @@ export default {
   },
   head() {
     return {
-      title: "About—The Ki Line",
+      title:
+        "Who is Ki? Transition Strategist, Certified Coach, ELI Master Practitioner",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "here…"
+          content:
+            "Who is Ki? Learn more about Ki Woyke, Transition Strategist and Certified Professional Coach and Energy Leadership Index Master Practitioner"
         }
       ]
     };

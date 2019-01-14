@@ -30,8 +30,8 @@ div.b-pt2
 </template>
 
 <script>
-import IconBase from "~/components/IconBase";
-import IconIso from "~/components/icons/IconIso";
+import IconBase from "@/components/IconBase";
+import IconIso from "@/components/icons/IconIso";
 import PostPreview from "@/components/PostPreview";
 
 export default {
@@ -59,6 +59,18 @@ export default {
           })
         };
       });
+  },
+  head() {
+    return {
+      title: `The Ki Line Blog. Upgrade to a simpler, happier life`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: `The Ki Line Blog: Life stories and lessons about Alaska, Life Transitions, High Contrast Relationships, Coaching, Leadership, Growth, Joy, Happiness.`
+        }
+      ]
+    };
   }
 };
 </script>

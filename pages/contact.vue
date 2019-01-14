@@ -38,12 +38,14 @@ export default {
   },
   head() {
     return {
-      title: "Contact—The Ki Line",
+      title:
+        "Contact Ki, Certified Life Coach in Washington and online worldwide",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "here…"
+          content:
+            "Contact Ki for confidential, qualified coaching in life transitions and high-contrast relationships, for introverts and those wishing to make change."
         }
       ]
     };
