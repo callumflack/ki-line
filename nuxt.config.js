@@ -60,12 +60,12 @@ export default {
         cacheProvider: "memory"
       }
     ],
-    ["@nuxtjs/google-tag-manager", { id: "GTM-PTQSCT3" }],
     "@nuxtjs/style-resources"
   ],
 
   generate: {
     // routes: ["404"]
+    // fallback: "404.html"
     routes: function() {
       return axios
         .get(
@@ -73,8 +73,8 @@ export default {
             Math.floor(Date.now() / 1e3)
         )
         .then(res => {
-          const blogPosts = res.data.stories.map(bp => bp.full_slug);
-          return ["/", "/blog", "/about", ...blogPosts];
+          const posts = res.data.stories.map(x => x.full_slug);
+          return ["/", "/blog", "/about", ...posts];
         });
     }
   },
