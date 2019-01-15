@@ -48,7 +48,7 @@ export default {
     /* { src: "~/plugins/vue-scroll-reveal", ssr: false }, */
     { src: "~/plugins/vue-tiny-slider", ssr: false },
     "~/plugins/vue-moment",
-    "@/plugins/helper"
+    "@/plugins/helpers"
   ],
 
   modules: [

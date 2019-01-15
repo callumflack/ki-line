@@ -1,16 +1,6 @@
 <template lang="pug">
-div.b-pt2
-  //- header.Header.b-pb2
-    .AspectRatio.sm-AspectRatio--4x3.mdl-AspectRatio--3x1
-      .AspectRatio-object
-        img(src="/images2/hero-mountain-mirror.jpg", alt="Gladness")
-      .AspectRatio-object.HeroBlend.f.f-childrenCenter
-        div
-          .GutterInsetX
-            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg No one can touch your essence
-
-  section.b-pb2
-    .Container.Header--animate
+  section.b-blog-page.b-pb2.Header--animate
+    .Container
       .b-mb1.u-textCenter
         IconBase(icon-name="icon-iso" height="36" width="36")
           IconIso
