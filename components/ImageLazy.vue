@@ -1,24 +1,15 @@
-<template>
-  <figure :class="figureClasses" ref="placeholder">
-    <img
-      :class="[
-        'low-rez',
-        {
-          'is-loaded': largeUrl
-        }
-      ]"
+<template lang="pug">
+  figure.image(ref="placeholder")
+    img(
+      :class="['low-rez', {'is-loaded': largeUrl}]"
       :src="smallUrl"
-    />
-    <img
-      :class="[
-        'high-rez',
-        {
-          'is-loaded': largeUrl
-        }
-      ]"
+      :alt="alt"
+    )
+    img(
+      :class="['high-rez', {'is-loaded': largeUrl}]"
       :src="largeUrl"
-    />
-  </figure>
+      :alt="alt"
+    )
 </template>
 
 <script>
@@ -26,14 +17,17 @@ const baseUrl = "https://res.cloudinary.com/pw-img-cdn/image/fetch";
 const blurUrl = `${baseUrl}/w_50,e_blur:300`;
 
 function calcImageDimension(length, pixelRatio) {
-  return 100 * Math.round(length * pixelRatio / 100);
+  return 100 * Math.round((length * pixelRatio) / 100);
 }
 
 export default {
   name: "lazy-image",
-
   props: {
     src: {
+      type: String,
+      required: true
+    },
+    alt: {
       type: String,
       required: true
     },
@@ -48,7 +42,6 @@ export default {
     post: Boolean,
     wrappedInLink: Boolean
   },
-
   computed: {
     figureClasses() {
       return [
@@ -82,7 +75,6 @@ export default {
       return this.ratio ? `height: calc(66vw * ${this.ratio})` : "";
     }
   },
-
   data() {
     return {
       // Set to undefined as defaulting to an empty string shows

@@ -3,11 +3,11 @@ div
   header.Header.b-pb2
     .AspectRatio.sm-AspectRatio--4x3.mdl-AspectRatio--3x1
       .AspectRatio-object
-        img(src="/images2/hero-dusktips.jpg", alt="Gladness")
+        ImageLazy(src="https://res.cloudinary.com/pw-img-cdn/image/upload/v1547536137/ki-line/hero-dusktips.jpg", alt="Upgrade to simple")
+        //- img(src="/images/hero-dusktips.jpg", alt="Gladness")
       .AspectRatio-object.HeroBlend.f.f-childrenCenter
-        div
-          .GutterInsetX
-            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Upgrade to simple
+        .GutterInsetX
+          h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg Upgrade to simple
 
   section.b-pb2
     .Container.Header--animate

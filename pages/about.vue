@@ -3,12 +3,11 @@ div
   header.Header.b-pb2
     .AspectRatio.sm-AspectRatio--4x3.mdl-AspectRatio--3x1
       .AspectRatio-object
-        img(src="/images2/hero-shorebeyond.jpg", alt="Gladness")
+        //- img(src="/images/hero-shorebeyond.jpg", alt="Gladness")
+        ImageLazy(src="https://res.cloudinary.com/pw-img-cdn/image/upload/v1547535681/ki-line/hero-shorebeyond.jpg", alt="No one can touch your essence")
       .AspectRatio-object.HeroBlend.f.f-childrenCenter
-        div
-          .GutterInsetX
-            h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg No one can touch your essence
-            //- p.fs-text-sm.fs-italic.c-bg.u-textCenter — Carl Jung
+        .GutterInsetX
+          h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg No one can touch your essence
 
   section.b-pb2
     .Container.Header--animate
@@ -19,7 +18,7 @@ div
           span About Ki
       .Scope-post
         .ParagraphImage.w-1x3.w-lg-3x12.m-r6.p-b3
-          img(src="/images2/ki.jpg", alt="")
+          img(src="/images/ki.jpg", alt="")
 
         :markdown-it()
           Hello, I’m Ki Woyke. 
@@ -36,15 +35,15 @@ div
         
         .FlexGrid.FlexGrid--sm.FlexGrid--retainGrid
           .Credential.w-1x2.w-sm-1x3
-            img(src="/images2/credential-iPEC.png", alt="Institute for Excellence in Coaching, iPEC")
+            img(src="/images/credential-iPEC.png", alt="Institute for Excellence in Coaching, iPEC")
             p.fs-text-sm.m-t2 Certified Professional Coach (Institute for Excellence in Coaching, iPEC)
 
           .Credential.w-1x2.w-sm-1x3
-            img(src="/images2/credential-ACC-bw.png", alt="ACC, accredited by the International Coaching Certification")
+            img(src="/images/credential-ACC-bw.png", alt="ACC, accredited by the International Coaching Certification")
             p.fs-text-sm.m-t2 Associate Certified Coach (ACC, accredited by the International Coaching Certification)
 
           .Credential.w-1x2.w-sm-1x3
-            img(src="/images2/credential-ELi-bw.png", alt="Master Practitioner, Energy Leadership Index")
+            img(src="/images/credential-ELi-bw.png", alt="Master Practitioner, Energy Leadership Index")
             p.fs-text-sm.m-t2 Master Practitioner, Energy Leadership Index
 
           .Credential.w-1x2.w-sm-1x3.u-sm-hidden
@@ -80,19 +79,26 @@ div
         .Scope-post
           .b-mb075
             .m-b4.mo-Extract-super
-              img(src="/images2/approach-map-2-1.jpg", alt="Envision phase")
+              .AspectRatio(style="padding-bottom:23.6842105%")
+                .AspectRatio-object
+                  ImageLazy(src="https://res.cloudinary.com/pw-img-cdn/image/upload/v1547535873/ki-line/approach-map-2-1.jpg", alt="Approach step 1: envision")
+              //- img(src="/images/approach-map-2-1.jpg", alt="Envision phase")
             :markdown-it()
               From tunnel vision to the big picture: in the _**envision**_ phase, we explore where you are. We map where you want to be, and see what else is there. This phase brings out hidden gems, gifts, new talents, relevant life history, backburner dreams, and connects mind, body, heart, and gut. 
 
           .b-mb075
             .m-b4.mo-Extract-super
-              img(src="/images2/approach-map-2-2.jpg", alt="Empower phase")
+              .AspectRatio(style="padding-bottom:23.6842105%")
+                .AspectRatio-object
+                  ImageLazy(src="https://res.cloudinary.com/pw-img-cdn/image/upload/v1547535874/ki-line/approach-map-2-2.jpg", alt="Approach step 2: empower")
             :markdown-it()
               Redesigning your foundation, shaping the goal, mapping your steps to the top: the _**empower**_ phase gets practical. You commit to action and tell me how you want to be held accountable. While you see small results immediately, true transformation happens with consistent action over time.
 
           .b-mb075
             .m-b4.mo-Extract-super
-              img(src="/images2/approach-map-2-3.jpg", alt="Momentum phase")
+              .AspectRatio(style="padding-bottom:23.6842105%")
+                .AspectRatio-object
+                  ImageLazy(src="https://res.cloudinary.com/pw-img-cdn/image/upload/v1547535876/ki-line/approach-map-2-3.jpg", alt="Approach step 3: succeed")
             :markdown-it()
               As you _**succeed**_, flow is generated with purpose. This is where momentum carries your project or vision to a tangible place. The experience is different for everyone. What unites all is the experience of a shift in energy and awareness. Here is where you make change work in your favor and design a strategy that will help you maintain the momentum.
 

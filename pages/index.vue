@@ -3,7 +3,8 @@ div
   header.Header.b-pb2
     .AspectRatio.sm-AspectRatio--4x3.mdl-AspectRatio--10x4
       .AspectRatio-object
-        img(src="/images2/tobias-keller-99139-unsplash2.jpg", alt="Gladness")
+        //- img(src="/images/tobias-keller-99139-unsplash2.jpg", alt="Gladness")
+        ImageLazy(src="https://res.cloudinary.com/pw-img-cdn/image/upload/v1547534745/ki-line/tobias-keller-99139-unsplash2.jpg", alt="I'm glad you're here")
       .AspectRatio-object.HeroIndex-blend.f.f-childrenCenter
         .GutterInsetX.b-mb2.b-sm-mb4
           h1.Supertitle.Supertitle--shadow.u-textCenter.c-bg.m-b0
@@ -29,9 +30,8 @@ div
 
       .b-mt1.mo-Extract-super
         .AspectRatio.AspectRatio--7x5
-          .AspectRatio-object
-            nuxt-link(to="/services")
-              img(src="/images2/services-map.jpg", alt="Services")
+          .AspectRatio-objectnuxt-link(to="/services")
+            ImageLazy(src="https://res.cloudinary.com/pw-img-cdn/image/upload/v1547535178/ki-line/services-map.jpg", alt="Ki's services")
 
   section.b-pb2
     .Container
@@ -43,7 +43,7 @@ div
       
       div
         .ParagraphImage.w-1x3.w-lg-3x12.m-r6.p-b3
-          img(src="/images2/ki-recut.jpg", alt="")
+          img(src="/images/ki-recut.jpg", alt="")
         p 
           //- span.fw-700.fs-italic Who is Ki Woyke? 
           | Curiosity and a need to balance my head and heart had me explore a few unique careers. With a Master’s degree in Literature and Oriental Studies (Bayerische Julius-Maximilians University Würzburg, Germany) and a passion to learn other cultures and languages, I am always seeking multi-cultural destinations, partnerships, and learning. A desire for growth made me look for, and accept, new opportunities. I enjoyed almost a decade each working in International Relations in Europe, and teaching foreign languages in Alaska. I was a volunteer radio personality for the American Forces Network in Germany hosting a show that focused on German culture and traditions, and I had the privilege to serve as Shareholder Relations Administrator for an Alaskan Native Village Corporation. What all positions have in common is the joy that comes from helping others realize their dreams, reach their goals, re-define themselves and connect deeply with others. 
@@ -74,6 +74,7 @@ import IconContainer from "~/components/icons/IconContainer";
 import IconPyramid from "~/components/icons/IconPyramid";
 import IconBowl from "~/components/icons/IconBowl";
 import ImageLazy from "~/components/ImageLazy";
+// import VLazyImage from "v-lazy-image";
 // import VueTinySlider from "vue-tiny-slider";
 
 // ssr: false ain't enough…
@@ -188,7 +189,7 @@ export default {
 }
 
 .Heights {
-  background-image: url("/images2/heights3.jpg");
+  background-image: url("/images/heights3.jpg");
   background-blend-mode: multiply;
 }
 

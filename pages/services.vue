@@ -3,7 +3,7 @@ div
   header.Header.b-pb2
     .AspectRatio.sm-AspectRatio--4x3.mdl-AspectRatio--3x1
       .AspectRatio-object
-        img(src="/images2/hero-orange-cut.jpg", alt="Gladness")
+        ImageLazy(src="https://res.cloudinary.com/pw-img-cdn/image/upload/v1547535356/ki-line/hero-orange-cut.jpg", alt="Envision. Empower. Succeed.")
       .AspectRatio-object.HeroBlend.f.f-childrenCenter
         div
           .GutterInsetX
@@ -38,37 +38,37 @@ import ImageLazy from "~/components/ImageLazy";
 
 const services = [
   {
-    image: "/images2/services-introvert.jpg",
+    image: "/images/services-introvert.jpg",
     title: "Coaching for Introverts",
     lede:
       "<span class='fs-italic'>The Ki Line is where introverts find their voice, are heard, and understood.</span> Coaching with Ki is a journey into gratitude, understanding, self-acceptance, and growth. Show up for yourself, get beautiful results."
   },
   {
-    image: "/images2/services-transitions.jpg",
+    image: "/images/services-transitions.jpg",
     title: "Transitions",
     lede:
       "<span class='fs-italic'>Are you experiencing a major change in your life?</span> A transition in your career, a cross-cultural move? Let’s talk about how you can stay balanced and transition joyfully with Transition Coaching."
   },
   {
-    image: "/images2/services-contrast.jpg",
+    image: "/images/services-contrast.jpg",
     title: "High-Contrast Relationships",
     lede:
       "<span class='fs-italic'>High-contrast relationships have their own set of transitionary challenges.</span> Is contrast draining or energizing you? The Ki~Line helps keep your love light, steady, and growing, even when contrasts clash."
   },
   {
-    image: "/images2/services-alaska.jpg",
+    image: "/images/services-alaska.jpg",
     title: "Alaska—Transition to the Last Frontier",
     lede:
       "<span class='fs-italic'>Has life moved you to Alaska? Adjusting is a challenge, but rich with opportunity.</span> As someone who moved from Europe to Alaska and stayed for 15 years, I can help you transition gently. With coaching, you can adapt efficiently and enjoy this new chapter in your life as one of healing and growth."
   },
   {
-    image: "/images2/services-leadership.jpg",
+    image: "/images/services-leadership.jpg",
     title: "Energy Leadership™ Assessment",
     lede:
       "<span class='fs-italic'>Could your business run smoother and be more productive?</span> What is draining energy - a system, a process, or a person? Let’s talk about how you can influence energy and increase productivity, leadership and employee satisfaction after assessing your Energy Leadership Index."
   }
   /* {
-    image: "/images2/services-1.jpg",
+    image: "/images/services-1.jpg",
     title: "Pricing & Packages",
     lede:
       "I am committed to helping you achieve your goals and work through whatever blocks have been holding you back. Below, please find an overview of the prices and packages that are available. Each person's journey is different, and I will customize programs to your specific circumstances."
