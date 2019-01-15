@@ -27,6 +27,14 @@
   );
 }
 
+.b-blog-page {
+  padding-top: calc(3 * var(--rs-block-space)) !important;
+
+  @media (--sm) {
+    padding-top: calc(2 * var(--rs-block-space)) !important;
+  }
+}
+
 .image-multiply {
   mix-blend-mode: multiply;
 }
