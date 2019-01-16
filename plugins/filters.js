@@ -7,3 +7,9 @@ Vue.filter("resize", (image, size) => {
   }
   return null;
 });
+
+// Vue.filter("resize", (image, size) => {
+//   return typeof image === "undefined"
+//     ? ""
+//     : image.replace(/a.storybridge.com/g, "img2.storybridge.com/" + size);
+// });

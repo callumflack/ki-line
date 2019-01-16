@@ -5,17 +5,17 @@ export function markdown(string, param) {
   return marked(resize(string, param));
 }
 
-// export function resize(str, param) {
-//   return typeof str === "undefined"
-//     ? ""
-//     : str.replace(/a.storybridge.com/g, "img2.storybridge.com/" + param);
-// }
-
-export function resize(image, option) {
-  var imageService = "//img2.storyblok.com/";
-  var path = image.replace("//a.storyblok.com", "");
-  return imageService + option + path;
+export function resize(str, param) {
+  return typeof str === "undefined"
+    ? ""
+    : str.replace(/a.storybridge.com/g, "img2.storybridge.com/" + param);
 }
+
+// export function resize(image, option) {
+//   var imageService = "//img2.storyblok.com/";
+//   var path = image.replace("//a.storyblok.com", "");
+//   return imageService + option + path;
+// }
 
 // Vue.filter("resize", (image, size) => {
 //   if (typeof image !== "undefined") {
