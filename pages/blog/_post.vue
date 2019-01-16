@@ -1,28 +1,21 @@
 <template lang="pug">
-  article.b-blog-page.b-pb2.Header--animate(v-editable="blok")
+  article.b-blog-page.b-pb2.Header--animate(v-editable="post.content")
     header.Header.b-pb1
       .Container.Container--lg.mo-Extract-super 
-        //- .bg-text.c-bg.p-x3.p-y2.b-y3.u-textCenter(style="margin-bottom:1px")
-          IconBase.c-bg(icon-name="icon-turn" height="36" width="36" style="transform:translateY(2px)")
-            IconTurn
         .AspectRatio.AspectRatio--2x1
           .AspectRatio-object
-            img(:src="image", alt="Gladness")
-            //- img(:src="blok.image | resize:'1500x0'" :alt="post.content.image_alt")
-            //- img(:src="resize(image, '1500x0')")
+            //- img(:src="post.content.image", :alt="post.content.image_alt || post.content.title")
+            //- img(:src="post.content.image | resize(this.post.content.image, '1500x0')")
+            img(:src="imageResize", :alt="post.content.image_alt || post.content.title")
           .AspectRatio-object.HeroBlend
-            //- .f.f-alignItemsEnd.h-100
-              .GutterInsetX.b-pb1.w-100
-                //- h1.Title.flh-regular.Supertitle--shadow.u-textCenter.c-bg {{ title }}
-                h1.Meta.fs-text.u-textCenter.c-bg {{ title }}
-        h1.Meta.fs-text.u-textCenter.bg-black.c-bg.p-x4.p-y3.b-y4(style="margin-top:1px") {{ title }}
+        h1.Meta.fs-text.u-textCenter.bg-black.c-bg.p-x4.p-y3.b-y4(style="margin-top:1px") {{ post.content.title }}
 
     .Container
-      PostMarkdownContent(:content="content")
+      PostMarkdownContent(:content="post.content.content")
 
       .b-pt1
         hr.EndRule.bg-rule
-        p.fs-text-sm.c-text-light(v-if="contentNote") {{ contentNote }}
+        p.fs-text-sm.c-text-light(v-if="post.content.contentNote") {{ post.content.contentNote }}
         .FlexGrid.FlexGrid--sm
           .w-1x6.w-sm-1x10
             img.Avatar(src="/images/ki-dark-square.jpg", alt="Ki Woyke")
@@ -30,7 +23,6 @@
             .f.f-alignItemsCenter.h-100
               p.fs-text-sm
                 span Published {{ date | moment("MMMM Do, YYYY") }}<br>
-                //- span by {{ author }}
                 span.fs-italic 
                   | by 
                   nuxt-link(to="/about") Ki Woyke
@@ -40,8 +32,6 @@
 
 <script>
 import moment from "vue-moment";
-import IconBase from "~/components/IconBase";
-import IconTurn from "~/components/icons/IconTurn";
 import PostMarkdownContent from "@/components/PostMarkdownContent";
 // import { resize } from "@/plugins/helpers";
 import storyblokLivePreview from "@/mixins/storyblokLivePreview";
@@ -54,58 +44,84 @@ export default {
   mixins: [storyblokLivePreview],
   computed: {
     date() {
-      return new Date(this.published || this.post.created_at)
-        .toJSON()
-        .slice(0, 10);
+      return new Date(this.post.first_published_at).toJSON().slice(0, 10);
+    },
+    imageResize() {
+      if (typeof this.post.content.image !== "undefined") {
+        return (
+          "//img2.storyblok.com/1500x0" +
+          this.post.content.image.replace("//a.storyblok.com", "")
+        );
+      }
+      return null;
     }
   },
   /* methods: {
     resize
   },*/
-  asyncData(context) {
-    return context.app.$storyapi
-      .get("cdn/stories/blog/" + context.params.post, {
-        version: context.isDev ? "draft" : "published"
-        // resolve_links: 1
-      })
-      .then(res => {
-        // console.log(res.data);
-        return {
-          // author: res.data.story.content.author.story,
-          blok: res.data.story.content,
-          content: res.data.story.content.content,
-          contentNote: res.data.story.content.contentNote,
-          contentExcerpt: res.data.story.content.contentExcerpt,
-          image: res.data.story.content.image,
-          post: res.data.story,
-          published: res.data.story.first_published_at,
-          title: res.data.story.content.title
-        };
-      })
-      .catch(res => {
-        if (!res.response) {
-          console.error(res);
-          context.error({
-            statusCode: 404,
-            message: "Failed to receive content form api"
-          });
-        } else {
-          console.error(res.response.data);
-          context.error({
-            statusCode: res.response.status,
-            message: res.response.data
-          });
-        }
-      });
+  async asyncData(context) {
+    // Check if we are in the editor mode
+    let version =
+      context.query._storyblok || context.isDev ? "draft" : "published";
+
+    let post = await context.app.$storyapi.get(
+      `cdn/stories/blog/${context.params.post}`,
+      {
+        version: version,
+        sort_by: "first_published_at:desc"
+      }
+    );
+
+    return {
+      post: post.data.story
+    };
   },
+  // asyncData(context) {
+  //   return context.app.$storyapi
+  //     .get("cdn/stories/blog/" + context.params.post, {
+  //       version: context.isDev ? "draft" : "published"
+  //       // resolve_links: 1
+  //     })
+  //     .then(res => {
+  //       // console.log(res.data);
+  //       return {
+  //         // author: res.data.story.content.author.story,
+  //         blok: res.data.story.content,
+  //         content: res.data.story.content.content,
+  //         contentNote: res.data.story.content.contentNote,
+  //         contentExcerpt: res.data.story.content.contentExcerpt,
+  //         image: res.data.story.content.image,
+  //         post: res.data.story,
+  //         published: res.data.story.first_published_at,
+  //         title: res.data.story.content.title
+  //       };
+  //     })
+  //     .catch(res => {
+  //       if (!res.response) {
+  //         console.error(res);
+  //         context.error({
+  //           statusCode: 404,
+  //           message: "Failed to receive content form api"
+  //         });
+  //       } else {
+  //         console.error(res.response.data);
+  //         context.error({
+  //           statusCode: res.response.status,
+  //           message: res.response.data
+  //         });
+  //       }
+  //     });
+  // },
   head() {
     return {
-      title: `${this.title} — The Ki Line Blog`,
+      title: `${this.post.content.title} — The Ki Line Blog`,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: `${this.title} — The Ki Line Blog — ${this.contentExcerpt}`
+          content: `${this.post.content.title} — The Ki Line Blog — ${
+            this.post.content.contentExcerpt
+          }`
         }
       ]
     };
