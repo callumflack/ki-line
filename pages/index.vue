@@ -102,13 +102,13 @@ const quotes = [
   },
   {
     author: "Troy Price",
-    place: "Edmonton/AB",
+    place: "Profit Growth Specialist / Edmonton, AB",
     quote:
       "I admire her passion in helping individuals discover and appreciate their unique gifts. I have seen the enormous benefits from Ki ‘s expertise as a coach. Ki always provides excellent client service and does what is best for her clients in every situation. This is just one reason why she is a highly respected professional in her industry. I would highly recommend Ki to anyone looking to improve their personal life and wanting to find greater joy and success in their career; her skills in developing a customized solution for her clients are exceptional."
   },
   {
     author: "Joseph Myers",
-    place: "LMT",
+    place: "Licensed Massage Therapist / NY",
     quote:
       "I felt myself becoming more productive, confident, and committed to ideas as well as personal relationships over the course of four months. I learned how to achieve successful business practices and personal relationships. I shifted my perspective from external factors to internal ones and feel like I have a better understanding of how to follow my individual path to successful relationships of all kinds."
   },
@@ -120,7 +120,7 @@ const quotes = [
   },
   {
     author: "Andreas Woyke",
-    place: "Pianist and Composer, Graz/Austria",
+    place: "Pianist and Composer / Graz, Austria",
     quote:
       "After only one session I was already surprised to notice more clarity with some personal and professional challenges. Ki’s conscious guidance in our coaching conversation enabled me to focus on the essential, to let go of unnecessary distractions, and to gain clarity about my goals.  The tools she gave me allowed me to shift my energy upward, and to step closer to a clearer image of my goals and vision. She responds intuitively and with high sensitivity in her gift of listening and empathizing to what I share and describe."
   },
