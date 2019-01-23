@@ -53,6 +53,8 @@ export default {
   ],
 
   modules: [
+    "@nuxtjs/style-resources",
+    ["@nuxtjs/google-tag-manager", { id: "GTM-PLSPSHW" }],
     [
       "storyblok-nuxt",
       {
@@ -60,8 +62,7 @@ export default {
           process.env.NODE_ENV == "production" ? "9e6eqQOnLY3SC4kt5xogowtt" : "KMpFebbWQbmS5wF3TvfQOAtt",
         cacheProvider: "memory"
       }
-    ],
-    "@nuxtjs/style-resources"
+    ]
   ],
 
   generate: {
