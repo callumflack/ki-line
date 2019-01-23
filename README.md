@@ -2,7 +2,7 @@
 
 URL: thekiline.com
 
-Staging URL: thekiline.now.sh
+Staging URL: thekiline.netlify.com
 
 ## Build Setup
 
