@@ -38,6 +38,11 @@ export default {
       // Current scroll position
       const currentScroll = this.scrollTop();
 
+      // Do nothing if scroll position is above the window
+      // Handles iOS bounce scrolling
+      if (this.scrollState < 0) {
+        return;
+      }
       if (this.scrollTop() === 0) {
         home();
       } else if (currentScroll > this.scrollState) {
@@ -96,7 +101,8 @@ export default {
 
 .open {
   animation: open 1s ease forwards;
-  box-shadow: 0 9px 25px 0 rgba(0, 0, 0, 0.125), 0 19px 70px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 9px 25px 0 rgba(0, 0, 0, 0.125),
+    0 19px 70px 0 rgba(0, 0, 0, 0.05);
   /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15); */
 }
 
