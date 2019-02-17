@@ -14,7 +14,12 @@ export default {
         name: "description",
         content:
           "Transition coaching with Ki. Making change work for you. Alaska, Seattle and online worldwide."
-      }
+      },
+      {
+        /* failing pinterest */
+        name: "p:domain_verify",
+        content: "aefdc30ceddb027c6c48eea7ecb36deb"
+      },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -30,7 +35,7 @@ export default {
 
   css: ["~/assets/styles/application.css"],
 
-  /* 
+  /*
     You cannot use path aliases here (~ and @), you need to use relative or absolute paths. So it must be a dot!
     https://github.com/nuxt-community/style-resources-module
   */
@@ -93,7 +98,7 @@ export default {
       plugins: {}
       /* preset: { stage: 0 } */
     },
-    /* 
+    /*
       Get postcss syntax in single page component styles
       Requires <style lang="postcss"
       https://github.com/nuxt/nuxt.js/issues/3231
