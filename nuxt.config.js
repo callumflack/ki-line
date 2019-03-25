@@ -16,7 +16,7 @@ export default {
           "Transition coaching with Ki. Making change work for you. Alaska, Seattle and online worldwide."
       },
       {
-        /* failing pinterest */
+        /* pinterest */
         name: "p:domain_verify",
         content: "aefdc30ceddb027c6c48eea7ecb36deb"
       },
