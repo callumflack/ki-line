@@ -3,12 +3,10 @@
     img(
       :class="['low-rez', {'is-loaded': largeUrl}]"
       :src="smallUrl"
-      :alt="alt"
     )
     img(
       :class="['high-rez', {'is-loaded': largeUrl}]"
       :src="largeUrl"
-      :alt="alt"
     )
 </template>
 
@@ -27,10 +25,10 @@ export default {
       type: String,
       required: true
     },
-    alt: {
+    /* alt: {
       type: String,
       required: true
-    },
+    }, */
     square: Boolean,
     face: Boolean,
     aspect: Boolean,
@@ -41,39 +39,6 @@ export default {
     portrait: Boolean,
     post: Boolean,
     wrappedInLink: Boolean
-  },
-  computed: {
-    figureClasses() {
-      return [
-        "image",
-        "figure",
-        {
-          "figure--frame": this.frame,
-          "figure--large": this.large,
-          "figure--project": this.project,
-          "figure--portrait": this.portrait,
-          "figure--post": this.post,
-          "p-a0": this.wrappedInLink
-        }
-      ];
-    },
-    // attempt at retaining image aspect ratio space
-    // unfortunately, cloudinary size computations are just out
-    // if we use Math.round to save data space…
-    // DO NOT USE
-    ratioClasses() {
-      return [
-        "image-aspectRatio",
-        {
-          "figure--frame": this.frame,
-          "image-aspectRatio--4by3": this.aspect
-        }
-      ];
-    },
-    ratioStyle() {
-      // (v-if="page.projectColor", :style = 'projectColor')
-      return this.ratio ? `height: calc(66vw * ${this.ratio})` : "";
-    }
   },
   data() {
     return {
@@ -149,8 +114,8 @@ export default {
   width: 100%;
 }
 
-/* 
-  1. enable Safari to keep sharp edges 
+/*
+  1. enable Safari to keep sharp edges
      …but only works if pos-abs within an aspect-ratio div.
 */
 .low-rez {
@@ -166,8 +131,8 @@ export default {
   top: 0;
 }
 
-/* 
-  on full-res image load 
+/*
+  on full-res image load
 */
 
 .low-rez.is-loaded {
@@ -178,8 +143,8 @@ export default {
   opacity: 1;
 }
 
-/* 
-  use the SVG filter that's secreted on work/index 
+/*
+  use the SVG filter that's secreted on work/index
 */
 .project:hover img {
   filter: url("#blur");
